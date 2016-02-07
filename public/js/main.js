@@ -1,9 +1,11 @@
-console.log('Hello World');
+var testFile = require('./test');
 
-const blah = 'Test ES6';
+console.log(testFile);
 
-const fn = () => {
-	console.log(blah);
+const blah = `${testFile.test} ES6`;
+
+const fn = (name='Rob') => {
+	console.log(`${blah} functionality now, ${name}`);
 };
 
 fn();

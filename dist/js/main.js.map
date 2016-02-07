@@ -2,14 +2,16 @@
   "version": 3,
   "sources": [
     "node_modules/browser-pack/_prelude.js",
-    "public/js/main.js"
+    "/Users/Rob/Desktop/portfolio-site/public/js/main.js",
+    "/Users/Rob/Desktop/portfolio-site/public/js/test.js"
   ],
   "names": [],
-  "mappings": "AAAA;ACAA,QAAA,AAAQ,IAAR,AAAY;;AAEZ,MAAM,OAAA,AAAO;;AAEb,MAAM,WAAW,AAChB;SAAA,AAAQ,IADE,AAAM,AAChB,AAAY;;;AAGb",
+  "mappings": "AAAA;ACAA,YAAY,CAAC;;AAAb,IAAI,QAAQ,GAAG,OAAO,CAAC,QAAQ,CAAC,CAAC;;AAEjC,OAAO,CAAC,GAAG,CAAC,QAAQ,CAAC,CAAC;;AAEtB,IAAM,IAAI,GAAM,QAAQ,CAAC,IAAI,GAAA,MAAM,CAAC;;AAEpC,IAAM,EAAE,GAAG,SAAL,EAAE,GAAmB;AAG1B,KAHW,IAAI,GAAA,SAAA,CAAA,MAAA,IAAA,CAAA,IAAA,SAAA,CAAA,CAAA,CAAA,KAAA,SAAA,GAAC,KAAK,GAAA,SAAA,CAAA,CAAA,CAAA,CAAA;;AACrB,QAAO,CAAC,GAAG,CAAI,IAAI,GAAA,sBAAA,GAAuB,IAAI,CAAG,CAAC;CAClD,CAAC;;AAEF,EAAE,EAAE,CAAC;;;ACVL,YAAY,CAAC;;AAAb,MAAM,CAAC,OAAO,GAAG;AAChB,KAAI,EAAE,MAAM;CACZ,CAAC",
   "file": "generated.js",
   "sourceRoot": "",
   "sourcesContent": [
     "(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module '\"+o+\"'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})",
-    "console.log('Hello World');\n\nconst blah = 'Test ES6';\n\nconst fn = () => {\n\tconsole.log(blah);\n};\n\nfn();"
+    "var testFile = require('./test');\n\nconsole.log(testFile);\n\nconst blah = `${testFile.test} ES6`;\n\nconst fn = (name='Rob') => {\n\tconsole.log(`${blah} functionality now, ${name}`);\n};\n\nfn();",
+    "module.exports = {\n\ttest: 'Test'\n};"
   ]
 }
