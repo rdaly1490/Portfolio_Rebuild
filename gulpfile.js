@@ -5,6 +5,7 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 var exorcist = require('exorcist');
 var watchify = require('watchify');
+var sass = require('gulp-sass');
 // var browserSync = require('browser-sync').create();
 
 function bundle (bundler) {
@@ -23,13 +24,23 @@ gulp.task('watch', function () {
     watchify.args.debug = true;
     var watcher = watchify(browserify('./public/js/main.js', watchify.args));
     bundle(watcher);
+    watcher.on('log', gutil.log);
     watcher.on('update', function () {
         bundle(watcher);
     });
-    watcher.on('log', gutil.log);
 });
 
 gulp.task('js', function () {
     return bundle(browserify('./public/js/main.js'));
+});
+
+gulp.task('sass', function () {
+    return gulp.src('./public/css/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('sass-watch', function () {
+    gulp.watch('./public/css/*.scss', ['sass']);
 });
 
