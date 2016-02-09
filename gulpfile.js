@@ -6,6 +6,8 @@ var babelify = require('babelify');
 var exorcist = require('exorcist');
 var watchify = require('watchify');
 var sass = require('gulp-sass');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 // var browserSync = require('browser-sync').create();
 
 function bundle (bundler) {
@@ -42,5 +44,15 @@ gulp.task('sass', function () {
 
 gulp.task('sass-watch', function () {
     gulp.watch('./public/css/*.scss', ['sass']);
+});
+ 
+gulp.task('minify-images', () => {
+    return gulp.src('./public/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('./dist/images'));
 });
 
