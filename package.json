@@ -11,7 +11,8 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
-    "hogan-express": "*"
+    "hogan-express": "*",
+    "jquery": "^2.2.0"
   },
   "devDependencies": {
     "babelify": "6.3.0",

@@ -35,13 +35,13 @@ body {
 #main-page {
   height: 100vh;
   width: 100vw;
-  padding: 0;
+  padding: 20px 0px 0px 0px;
   background: url("/images/background.png") center no-repeat;
   background-size: cover; }
 
 .logo-container {
   height: 50%;
-  padding-top: 100px; }
+  padding-top: 115px; }
 
 .logo {
   height: 200px;
@@ -50,40 +50,62 @@ body {
   background-size: contain; }
 
 .icon-container {
-  height: 30%;
-  margin-top: -20px;
-  border-top: 2px solid white; }
+  height: 35%; }
   .icon-container .to-center {
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    border-top: 2px solid white; }
 
 .section-icons {
   display: inline-block;
   border-radius: 50%;
   height: 63px;
   width: 63px;
-  margin-top: 20px; }
+  margin-top: 30px; }
+  .section-icons:hover {
+    cursor: pointer; }
 
 #about {
   background: url("/images/user.png") center no-repeat;
   background-color: white;
   margin-right: 10px;
   border: 5px solid #0398B0; }
+  #about:hover {
+    background: url("/images/user-hover.png") center no-repeat;
+    background-color: #0398B0; }
 
 #work {
   background: url("/images/projects.png") center no-repeat;
   background-color: white;
   margin-right: 10px;
   border: 5px solid #E64D3D; }
+  #work:hover {
+    background: url("/images/projects-hover.png") center no-repeat;
+    background-color: #E64D3D; }
 
 #contact {
   background: url("/images/contact.png") center no-repeat;
   background-color: white;
   border: 5px solid #1BBC9C; }
+  #contact:hover {
+    background: url("/images/contact-hover.png") center no-repeat;
+    background-color: #1BBC9C; }
 
 .scroll-container {
   height: 70px; }
   .scroll-container .scroll {
     height: 100%;
+    width: 30px;
+    margin: 0 auto;
     background: url("/images/mouse.png") center no-repeat;
     background-size: contain; }
+    .scroll-container .scroll:hover {
+      cursor: pointer; }
+
+@media (min-width: 490px) {
+  #about {
+    margin-right: 20px; }
+  #work {
+    margin-right: 20px; } }

@@ -71,19 +71,19 @@ body {
 
 ///////////////////////////////////////
 ////////////// Main //////////////////
-///////////////////////////////////////
+//////////////////////////////////////
 
 #main-page {
 	height: 100vh;
 	width: 100vw;
-	padding: 0;
+	padding: 20px 0px 0px 0px;
 	background: url('/images/background.png') center no-repeat;
 	background-size: cover;
 }
 
 .logo-container {
 	height: 50%;
-	padding-top: 100px;
+	padding-top: 115px;
 }
 
 .logo {
@@ -94,12 +94,13 @@ body {
 }
 
 .icon-container {
-	height: 30%;
-	margin-top: -20px;
-	border-top: 2px solid $white;
+	height: 35%;
 	.to-center {
 		text-align: center;
 		width: 100%;
+		max-width: 280px;
+		margin: 0 auto;
+		border-top: 2px solid $white;
 	}
 }
 
@@ -108,7 +109,10 @@ body {
 	border-radius: 50%;
 	height: 63px;
 	width: 63px;
-	margin-top: 20px;
+	margin-top: 30px;
+	&:hover {
+		cursor: pointer;
+	}
 	// max-height: 100px;
 	// max-width:100px;
 }
@@ -118,6 +122,10 @@ body {
 	background-color: $white;
 	margin-right: 10px;
 	border: 5px solid $lightBlue;
+	&:hover {
+		background: url('/images/user-hover.png') center no-repeat;
+		background-color: $lightBlue;
+	}
 }
 
 #work {
@@ -125,23 +133,49 @@ body {
 	background-color: $white;
 	margin-right: 10px;
 	border: 5px solid $red;
+	&:hover {
+		background: url('/images/projects-hover.png') center no-repeat;
+		background-color: $red;
+	}
 }
 
 #contact {
 	background: url('/images/contact.png') center no-repeat;
 	background-color: $white;
 	border: 5px solid $green;
+	&:hover {
+		background: url('/images/contact-hover.png') center no-repeat;
+		background-color: $green;
+	}
 }
 
 .scroll-container {
 	height: 70px;
 	.scroll {
 		height:100%;
+		width: 30px;
+		margin: 0 auto;
 		background: url('/images/mouse.png') center no-repeat;
 		background-size: contain;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
 
 
 ////// Media-Queries ///////
 
+
+///////////////////////////////////////
+//////// Main Media Queries //////////
+//////////////////////////////////////
+
+@media (min-width: 490px) {
+	#about {
+		margin-right: 20px;
+	}
+	#work {
+		margin-right: 20px;
+	}
+}
