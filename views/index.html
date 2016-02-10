@@ -3,13 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{title}}</title>
-	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div>
-	<div class="test">Roboto</div>
+
+<!--
+////////////////////////////
+/////// Main Page /////////
+///////////////////////////-->
+
+<div id="main-page" class="container-fluid pages">
+	<div class="col-xs-12 logo-container">
+		<div class="col-xs-10 col-xs-offset-1 logo"></div>
+	</div>
+	<div class="col-xs-10 col-xs-offset-1 icon-container">
+		<div class="to-center">
+			<div id="about" class="section-icons"></div>
+			<div id="work" class="section-icons"></div>
+			<div id="contact" class="section-icons"></div>
+		</div>
+	</div>
+	<div class="col-xs-2 col-xs-offset-5 scroll-container">
+		<div class="scroll"></div>
+	</div>
 </div>
 
-<script type="text/javascript" src="../js/bundle.js"></script>
+<script type="text/javascript" src="/js/bundle.js"></script>
 </body>
 </html>

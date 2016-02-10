@@ -56,21 +56,92 @@ $bold: 700;
 $light: 300;
 
 /////////////////////////////////////////////////
-body {
-	background-color: $darkBlue;
+@-ms-viewport{
+  width: device-width;
 }
 
-.test {
+
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+	font-size: 16px;
+}
+
+///////////////////////////////////////
+////////////// Main //////////////////
+///////////////////////////////////////
+
+#main-page {
 	height: 100vh;
 	width: 100vw;
-	// background-image: url('/public/images/rob.png');
-	// background-color: red;
-	color: white;
-	font-size: 40px;
-	font-family: NexaBold;
+	padding: 0;
+	background: url('/images/background.png') center no-repeat;
+	background-size: cover;
+}
+
+.logo-container {
+	height: 50%;
+	padding-top: 100px;
+}
+
+.logo {
+	height: 200px;
+	padding: 0;
+	background: url('/images/logo.png') center no-repeat;
+	background-size: contain;
+}
+
+.icon-container {
+	height: 30%;
+	margin-top: -20px;
+	border-top: 2px solid $white;
+	.to-center {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+.section-icons {
+	display: inline-block;
+	border-radius: 50%;
+	height: 63px;
+	width: 63px;
+	margin-top: 20px;
+	// max-height: 100px;
+	// max-width:100px;
+}
+
+#about {
+	background: url('/images/user.png') center no-repeat;
+	background-color: $white;
+	margin-right: 10px;
+	border: 5px solid $lightBlue;
+}
+
+#work {
+	background: url('/images/projects.png') center no-repeat;
+	background-color: $white;
+	margin-right: 10px;
+	border: 5px solid $red;
+}
+
+#contact {
+	background: url('/images/contact.png') center no-repeat;
+	background-color: $white;
+	border: 5px solid $green;
+}
+
+.scroll-container {
+	height: 70px;
+	.scroll {
+		height:100%;
+		background: url('/images/mouse.png') center no-repeat;
+		background-size: contain;
+	}
 }
 
 
-
-
+////// Media-Queries ///////
 

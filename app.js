@@ -8,8 +8,8 @@ app.engine('html', require('hogan-express'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 
-app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/node_modules'));
 
 appRoutes(express, app);
 
