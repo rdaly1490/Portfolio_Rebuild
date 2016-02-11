@@ -192,7 +192,7 @@ body {
 
 .page-header {
 	background-color: $white;
-	height: 60px;
+	height: 55px;
 	margin: 1px;
 	margin-bottom: 20px;
 	.header-container {
@@ -207,7 +207,7 @@ body {
 			background-size: contain;
 		}
 		.icon {
-			margin-top: 10px;
+			margin-top: 7px;
 			margin-left: 5px;
 		}
 		.header-text {
@@ -249,6 +249,7 @@ body {
 	}
 	.lower-text {
 		ul {
+			text-align: left;
 			list-style-type: circle;
 			padding-left: 5px;
 			li {
@@ -303,5 +304,41 @@ body {
 	}
 	#work {
 		margin-right: 20px;
+	}
+}
+
+///////////////////////////////////////
+//////// About Media Queries /////////
+//////////////////////////////////////
+
+@media (min-width: 438px) {
+	.info-section {
+		.header-text {
+			.header {
+				font-size: 30px;
+			}
+			.sub-header {
+				font-size: 16px;
+			}
+		}
+		.lower-text {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (min-width: 700px) {
+	.info-section {
+		.header-text {
+			.header {
+				font-size: 50px;
+			}
+			.sub-header {
+				font-size: 16px;
+			}
+		}
+		.lower-text {
+			font-size: 16px;
+		}
 	}
 }
