@@ -41,12 +41,12 @@ $offBlack: #020202;
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('./fonts/quicksand/Quicksand-Regular.ttf') format('truetype');
+  src: url('./fonts/quicksand/Quicksand-Regular.otf') format('truetype');
 }
 
 @font-face {
   font-family: 'QuicksandBold';
-  src: url('./fonts/quicksand/Quicksand-Bold.ttf') format('truetype');
+  src: url('./fonts/quicksand/Quicksand-Bold.otf') format('truetype');
 }
 
 ////// Font-Weights ///////
@@ -69,13 +69,16 @@ body {
 	font-size: 16px;
 }
 
+.pages {
+	height: 100vh;
+	width: 100vw; // do i need these here?
+}
+
 ///////////////////////////////////////
 ////////////// Main //////////////////
 //////////////////////////////////////
 
 #main-page {
-	height: 100vh;
-	width: 100vw;
 	padding: 20px 0px 0px 0px;
 	background: url('/images/background.png') center no-repeat;
 	background-size: cover;
@@ -94,14 +97,25 @@ body {
 }
 
 .icon-container {
-	height: 35%;
+	height: 30%;
+	position: relative;
+	margin-top: 30px;
 	.to-center {
 		text-align: center;
 		width: 100%;
 		max-width: 280px;
 		margin: 0 auto;
-		border-top: 2px solid $white;
 	}
+}
+
+.icon-container::before {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	background-image: linear-gradient(to left, rgba(255,255,255, 0) 0%,
+	 rgba(255,255,255, 1) 40%, rgba(255,255,255, 1) 60%, rgba(255,255,255,0));
 }
 
 .section-icons {
@@ -163,6 +177,108 @@ body {
 	}
 }
 
+///////////////////////////////////////
+////////////// About /////////////////
+//////////////////////////////////////
+
+#about-page {
+	background: url('/images/overlay.png') center no-repeat;
+	background-size: cover;
+	background-color: $lightBlue;
+	padding: 0;
+}
+
+.page-header {
+	background-color: $white;
+	height: 60px;
+	margin: 1px;
+	margin-bottom: 20px;
+	.header-container {
+		text-align: center;
+		div {
+			display: inline-block;
+			height: 40px;
+		}
+		#about-icon {
+			width: 40px;
+			background: url('/images/user.png') center no-repeat;
+			background-size: contain;
+		}
+		.icon {
+			margin-top: 10px;
+			margin-left: 5px;
+		}
+		.header-text {
+			span {
+				margin-bottom: 10px;
+			}
+			font-family: 'NexaBold';
+			font-size: 20px;
+			color: $lightBlue;
+		}
+	}
+}
+
+.info-section {
+	text-align: center;
+	.my-picture {
+		height: 150px;
+		img {
+			height: 150px;
+			width:150px;
+			border-radius: 50%;
+		}
+	}
+	.header-text {
+		margin-bottom: 10px;
+		span {
+			display: block;
+		}
+		.header {
+			font-family: 'Quicksand';
+			font-size: 24px;
+			color: $white;
+		}
+		.sub-header {
+			font-family: 'QuicksandBold';
+			font-size: 14px;
+			color: $yellow;
+		}
+	}
+	.lower-text {
+		ul {
+			list-style-type: circle;
+			padding-left: 5px;
+			li {
+				margin-top: 10px;
+			}
+		}
+		font-size: 12px;
+		color: $white;
+		font-family: 'RobotoLight';
+		border-top: 1px solid rgba(255, 255, 255, .5);
+	}
+}
+
+///////////////////////////////////////
+////////////// Work //////////////////
+//////////////////////////////////////
+
+#work-page {
+	background: url('/images/overlay.png') center no-repeat;
+	background-size: cover;
+	background-color: $red;
+}
+
+///////////////////////////////////////
+////////////// Contact ///////////////
+//////////////////////////////////////
+
+#contact-page {
+	background: url('/images/overlay.png') center no-repeat;
+	background-size: cover;
+	background-color: $green;
+}
 
 ////// Media-Queries ///////
 
@@ -170,6 +286,14 @@ body {
 ///////////////////////////////////////
 //////// Main Media Queries //////////
 //////////////////////////////////////
+
+// 365 is when logo grows to max width *******
+@media (min-width: 342px) {
+	.icon-container {
+		margin-top: 50px;
+		height: 27%;
+	}
+}
 
 @media (min-width: 490px) {
 	#about {
