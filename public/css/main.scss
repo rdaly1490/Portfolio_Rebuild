@@ -98,17 +98,18 @@ body {
 
 .icon-container {
 	height: 30%;
-	position: relative;
 	margin-top: 30px;
+	padding: 0;
 	.to-center {
 		text-align: center;
 		width: 100%;
-		max-width: 280px;
+		max-width: 240px;
 		margin: 0 auto;
+		position: relative;
 	}
 }
 
-.icon-container::before {
+.to-center::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -127,8 +128,6 @@ body {
 	&:hover {
 		cursor: pointer;
 	}
-	// max-height: 100px;
-	// max-width:100px;
 }
 
 #about {
@@ -136,6 +135,7 @@ body {
 	background-color: $white;
 	margin-right: 10px;
 	border: 5px solid $lightBlue;
+	float: left;
 	&:hover {
 		background: url('/images/user-hover.png') center no-repeat;
 		background-color: $lightBlue;
@@ -147,6 +147,7 @@ body {
 	background-color: $white;
 	margin-right: 10px;
 	border: 5px solid $red;
+	text-align: center;
 	&:hover {
 		background: url('/images/projects-hover.png') center no-repeat;
 		background-color: $red;
@@ -157,6 +158,7 @@ body {
 	background: url('/images/contact.png') center no-repeat;
 	background-color: $white;
 	border: 5px solid $green;
+	float: right;
 	&:hover {
 		background: url('/images/contact-hover.png') center no-repeat;
 		background-color: $green;
@@ -287,7 +289,7 @@ body {
 //////// Main Media Queries //////////
 //////////////////////////////////////
 
-// 365 is when logo grows to max width *******
+// 365px is when logo grows to max width *******
 @media (min-width: 342px) {
 	.icon-container {
 		margin-top: 50px;

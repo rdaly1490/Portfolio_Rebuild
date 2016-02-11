@@ -53,15 +53,16 @@ body {
 
 .icon-container {
   height: 30%;
-  position: relative;
-  margin-top: 30px; }
+  margin-top: 30px;
+  padding: 0; }
   .icon-container .to-center {
     text-align: center;
     width: 100%;
-    max-width: 280px;
-    margin: 0 auto; }
+    max-width: 240px;
+    margin: 0 auto;
+    position: relative; }
 
-.icon-container::before {
+.to-center::before {
   content: "";
   display: block;
   position: absolute;
@@ -82,7 +83,8 @@ body {
   background: url("/images/user.png") center no-repeat;
   background-color: white;
   margin-right: 10px;
-  border: 5px solid #0398B0; }
+  border: 5px solid #0398B0;
+  float: left; }
   #about:hover {
     background: url("/images/user-hover.png") center no-repeat;
     background-color: #0398B0; }
@@ -91,7 +93,8 @@ body {
   background: url("/images/projects.png") center no-repeat;
   background-color: white;
   margin-right: 10px;
-  border: 5px solid #E64D3D; }
+  border: 5px solid #E64D3D;
+  text-align: center; }
   #work:hover {
     background: url("/images/projects-hover.png") center no-repeat;
     background-color: #E64D3D; }
@@ -99,7 +102,8 @@ body {
 #contact {
   background: url("/images/contact.png") center no-repeat;
   background-color: white;
-  border: 5px solid #1BBC9C; }
+  border: 5px solid #1BBC9C;
+  float: right; }
   #contact:hover {
     background: url("/images/contact-hover.png") center no-repeat;
     background-color: #1BBC9C; }
