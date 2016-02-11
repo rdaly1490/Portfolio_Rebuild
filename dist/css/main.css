@@ -131,7 +131,9 @@ body {
   margin: 1px;
   margin-bottom: 20px; }
   .page-header .header-container {
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    padding-right: 137px; }
     .page-header .header-container div {
       display: inline-block;
       height: 40px; }
@@ -140,9 +142,11 @@ body {
       background: url("/images/user.png") center no-repeat;
       background-size: contain; }
     .page-header .header-container .icon {
-      margin-top: 7px;
-      margin-left: 5px; }
+      margin: 7px 5px 0px 5px; }
     .page-header .header-container .header-text {
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
       font-family: 'NexaBold';
       font-size: 20px;
       color: #0398B0; }

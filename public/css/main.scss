@@ -197,6 +197,8 @@ body {
 	margin-bottom: 20px;
 	.header-container {
 		text-align: center;
+		position: relative;
+		padding-right: 137px;
 		div {
 			display: inline-block;
 			height: 40px;
@@ -207,16 +209,18 @@ body {
 			background-size: contain;
 		}
 		.icon {
-			margin-top: 7px;
-			margin-left: 5px;
+			margin: 7px 5px 0px 5px;
 		}
 		.header-text {
-			span {
-				margin-bottom: 10px;
-			}
+			position: absolute;
+			top: 50%;
+			margin-top: -10px;
 			font-family: 'NexaBold';
 			font-size: 20px;
 			color: $lightBlue;
+			span {
+				margin-bottom: 10px;
+			}
 		}
 	}
 }
