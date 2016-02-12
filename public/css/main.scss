@@ -97,8 +97,8 @@ body {
 }
 
 .icon-container {
-	height: 30%;
-	margin-top: 30px;
+	height: 40%;
+	margin-top: -15px;
 	padding: 0;
 	.to-center {
 		text-align: center;
@@ -283,8 +283,119 @@ body {
 
 #contact-page {
 	background: url('/images/overlay.png') center no-repeat;
+	padding: 0px;
 	background-size: cover;
 	background-color: $green;
+}
+
+#contact-icon {
+	margin-left: -42px;
+	width: 40px;
+	background: url('/images/contact.png') center no-repeat;
+	background-size: contain;
+}
+
+.contact-squares {
+	height: 100%;
+	width: 200px;
+	margin: 0 auto;
+	position: relative;
+	.email {
+		position: absolute;
+		top: 230px;
+		left: -20px;
+		transform: rotate(-4deg);
+		z-index: 1;
+		background-color: $white;
+		height: 125px;
+		width: 200px;
+		border-radius: 5px;
+		.contact-image-container {
+			border-left: 1px dashed $red;
+			border-right: 1px dashed $red;
+			border-top: 1px dashed $red;
+			height: 80%;
+			padding-top: 25px;
+			.contact-image {
+				height: 50px;
+				width: 50px;
+				background: url('/images/gmail.png') center no-repeat;
+				background-size: contain;
+				margin: 0 auto;
+			}
+		}
+		.bottom-title {
+			font-family: 'NexaBold';
+			font-size: 14px;
+			color: $white;
+			text-align: center;
+			width: 100%;
+			height: 25px;
+			line-height: 25px;
+			border-radius: 0px 0px 5px 5px;
+			background-color: $red;
+			span {
+				vertical-align: middle;
+			}
+		}
+	}
+	.social-media {
+		position: absolute;
+		top: 342px;
+		left: 15px;
+		transform: rotate(2deg);
+		background-color: $white;
+		height: 125px;
+		width: 200px;
+		border-radius: 5px;
+		.social-media-images-container {
+			height: 80%;
+			padding-top: 30px;
+			.social-media-images {
+				margin: 0 auto;
+				height: 50px;
+				width: 150px;
+				.github {
+					display: inline-block;
+					height: 100%;
+					width: 31%;
+					background: url('/images/github-social.png') center no-repeat;
+					background-size: contain;
+					cursor: pointer;
+				}
+				.fb {
+					display: inline-block;
+					height: 100%;
+					width: 31%;
+					background: url('/images/fb-social.png') center no-repeat;
+					background-size: contain;
+					cursor: pointer;
+				}
+				.twitter {
+					display: inline-block;
+					height: 100%;
+					width: 31%;
+					background: url('/images/twitter-social.png') center no-repeat;
+					background-size: contain;
+					cursor: pointer;
+				}
+			}
+		}
+		.bottom-title {
+			font-family: 'NexaBold';
+			font-size: 14px;
+			color: $darkBlue;
+			text-align: center;
+			width: 100%;
+			height: 25px;
+			background-color: $yellow;
+			border-radius: 0px 0px 5px 5px;
+			line-height: 25px;
+			span {
+				vertical-align: middle;
+			}
+		}
+	}
 }
 
 ////// Media-Queries ///////
@@ -297,8 +408,8 @@ body {
 // 365px is when logo grows to max width *******
 @media (min-width: 342px) {
 	.icon-container {
-		margin-top: 50px;
-		height: 27%;
+		height: 37%;
+		margin-top: 0px;
 	}
 }
 
@@ -332,6 +443,9 @@ body {
 }
 
 @media (min-width: 700px) {
+	.page-header {
+		margin-bottom: 75px;
+	}
 	.info-section {
 		.header-text {
 			.header {
@@ -343,6 +457,25 @@ body {
 		}
 		.lower-text {
 			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 1015px) {
+	.page-header {
+		margin-bottom: 55px;
+	}
+	.info-section {
+		.header-text {
+			.header {
+				font-size: 70px;
+			}
+			.sub-header {
+				font-size: 24px;
+			}
+		}
+		.lower-text {
+			font-size: 20px;
 		}
 	}
 }
