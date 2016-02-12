@@ -295,6 +295,21 @@ body {
 	background-size: contain;
 }
 
+.bottom-main-image {
+	display: none;
+	height: 350px;
+	width: 350px;
+	background: url('/images/developer-on-desk.png') center no-repeat;
+	background-size: contain;
+}
+
+.center-contacts {
+	width: 400px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
 .contact-squares {
 	height: 100%;
 	width: 200px;
@@ -479,3 +494,153 @@ body {
 		}
 	}
 }
+
+///////////////////////////////////////
+//////// About Media Queries /////////
+//////////////////////////////////////
+
+@media (min-width: 700px) {
+	.bottom-main-image {
+		display: inline-block;
+		position: absolute;
+		top: 200px;
+		left: -120px;
+	}
+	.contact-squares {
+		position: static;
+		.email {
+			top: 240px;
+			left: 260px;
+		}
+		.social-media {
+			top: 352px;
+			left: 295px;
+		}
+	}
+}
+
+@media (min-width: 700px) {
+	.bottom-main-image {
+		height: 400px;
+		width: 400px;
+		left: -180px;
+	}
+	.contact-squares {
+		position: static;
+		width: 400px;
+		.email {
+			height: 175px;
+			width: 325px;
+			top: 240px;
+			left: 240px;
+			.contact-image-container {
+				height: 70%;
+				padding-top: 35px;
+				.contact-image {
+					height: 60px;
+					width: 60px;
+				}
+			}
+			.bottom-title {
+				font-size: 18px;
+				width: 100%;
+				height: 52px;
+				line-height: 52px;
+				span {
+					vertical-align: middle;
+				}
+			}
+		}
+		.social-media {
+			height: 175px;
+			width: 325px;
+			top: 398px;
+			left: 295px;
+			.social-media-images-container {
+				height: 70%;
+				padding-top: 43px;
+				.social-media-images {
+					width: 200px;
+				}
+			}
+			.bottom-title {
+				font-size: 18px;
+				width: 100%;
+				height: 52px;
+				line-height: 52px;
+				span {
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.bottom-main-image {
+		height: 400px;
+		width: 400px;
+		left: -180px;
+	}
+	.contact-squares {
+		position: static;
+		width: 400px;
+		.email {
+			height: 175px;
+			width: 325px;
+			top: 240px;
+			left: 240px;
+			.contact-image-container {
+				height: 70%;
+				padding-top: 35px;
+				.contact-image {
+					height: 60px;
+					width: 60px;
+				}
+			}
+			.bottom-title {
+				font-size: 18px;
+				width: 100%;
+				height: 52px;
+				line-height: 52px;
+				span {
+					vertical-align: middle;
+				}
+			}
+		}
+		.social-media {
+			height: 175px;
+			width: 325px;
+			top: 398px;
+			left: 295px;
+			.social-media-images-container {
+				height: 70%;
+				padding-top: 43px;
+				.social-media-images {
+					width: 200px;
+				}
+			}
+			.bottom-title {
+				font-size: 18px;
+				width: 100%;
+				height: 52px;
+				line-height: 52px;
+				span {
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

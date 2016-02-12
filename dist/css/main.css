@@ -202,6 +202,19 @@ body {
   background: url("/images/contact.png") center no-repeat;
   background-size: contain; }
 
+.bottom-main-image {
+  display: none;
+  height: 350px;
+  width: 350px;
+  background: url("/images/developer-on-desk.png") center no-repeat;
+  background-size: contain; }
+
+.center-contacts {
+  width: 400px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative; }
+
 .contact-squares {
   height: 100%;
   width: 200px;
@@ -329,3 +342,106 @@ body {
     font-size: 24px; }
   .info-section .lower-text {
     font-size: 20px; } }
+
+@media (min-width: 700px) {
+  .bottom-main-image {
+    display: inline-block;
+    position: absolute;
+    top: 200px;
+    left: -120px; }
+  .contact-squares {
+    position: static; }
+    .contact-squares .email {
+      top: 240px;
+      left: 260px; }
+    .contact-squares .social-media {
+      top: 352px;
+      left: 295px; } }
+
+@media (min-width: 700px) {
+  .bottom-main-image {
+    height: 400px;
+    width: 400px;
+    left: -180px; }
+  .contact-squares {
+    position: static;
+    width: 400px; }
+    .contact-squares .email {
+      height: 175px;
+      width: 325px;
+      top: 240px;
+      left: 240px; }
+      .contact-squares .email .contact-image-container {
+        height: 70%;
+        padding-top: 35px; }
+        .contact-squares .email .contact-image-container .contact-image {
+          height: 60px;
+          width: 60px; }
+      .contact-squares .email .bottom-title {
+        font-size: 18px;
+        width: 100%;
+        height: 52px;
+        line-height: 52px; }
+        .contact-squares .email .bottom-title span {
+          vertical-align: middle; }
+    .contact-squares .social-media {
+      height: 175px;
+      width: 325px;
+      top: 398px;
+      left: 295px; }
+      .contact-squares .social-media .social-media-images-container {
+        height: 70%;
+        padding-top: 43px; }
+        .contact-squares .social-media .social-media-images-container .social-media-images {
+          width: 200px; }
+      .contact-squares .social-media .bottom-title {
+        font-size: 18px;
+        width: 100%;
+        height: 52px;
+        line-height: 52px; }
+        .contact-squares .social-media .bottom-title span {
+          vertical-align: middle; } }
+
+@media (min-width: 1100px) {
+  .bottom-main-image {
+    height: 400px;
+    width: 400px;
+    left: -180px; }
+  .contact-squares {
+    position: static;
+    width: 400px; }
+    .contact-squares .email {
+      height: 175px;
+      width: 325px;
+      top: 240px;
+      left: 240px; }
+      .contact-squares .email .contact-image-container {
+        height: 70%;
+        padding-top: 35px; }
+        .contact-squares .email .contact-image-container .contact-image {
+          height: 60px;
+          width: 60px; }
+      .contact-squares .email .bottom-title {
+        font-size: 18px;
+        width: 100%;
+        height: 52px;
+        line-height: 52px; }
+        .contact-squares .email .bottom-title span {
+          vertical-align: middle; }
+    .contact-squares .social-media {
+      height: 175px;
+      width: 325px;
+      top: 398px;
+      left: 295px; }
+      .contact-squares .social-media .social-media-images-container {
+        height: 70%;
+        padding-top: 43px; }
+        .contact-squares .social-media .social-media-images-container .social-media-images {
+          width: 200px; }
+      .contact-squares .social-media .bottom-title {
+        font-size: 18px;
+        width: 100%;
+        height: 52px;
+        line-height: 52px; }
+        .contact-squares .social-media .bottom-title span {
+          vertical-align: middle; } }
