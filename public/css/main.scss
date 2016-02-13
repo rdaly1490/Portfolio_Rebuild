@@ -291,6 +291,39 @@ body {
 #work-text {
 	color: $red;
 }
+
+.work-carousel {
+	height: 80vh;
+	padding: 0;
+	div {
+		background-color: blue;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+#prev-arrow {
+	height: 50px;
+	width: 50px;
+	z-index: 1;
+}
+
+#next-arrow {
+	height: 50px;
+	width: 50px;
+	z-index: 1;
+}
+
+.slick-dots {
+	li {
+		button{
+			&::before {
+			font-size: 15px;
+			// color: $white;
+			}
+		}
+	}
+}
 ///////////////////////////////////////
 ////////////// Contact ///////////////
 //////////////////////////////////////

@@ -12,7 +12,8 @@
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
     "hogan-express": "*",
-    "jquery": "^2.2.0"
+    "jquery": "^2.2.0",
+    "slick-carousel": "^1.5.9"
   },
   "devDependencies": {
     "babelify": "6.3.0",
