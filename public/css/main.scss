@@ -71,7 +71,13 @@ body {
 
 .pages {
 	height: 100vh;
-	width: 100vw; // do i need these here?
+	// width: 100vw; // do i need these here?
+
+	//XXXX IMPORTANT XXXX
+	// later might need to do something like if viewportHeight > x or media queries
+	// in case someone tilts phone to landscape, vh wil probably screw everything up royally.
+	// or maybe if screen landscape height: 300vh....
+	//XXXX IMPORTANT XXXX
 }
 
 ///////////////////////////////////////
@@ -79,18 +85,18 @@ body {
 //////////////////////////////////////
 
 #main-page {
-	padding: 20px 0px 0px 0px;
+	padding: 4vh 0vh 0vh 0vh; //20px 0px 0px 0px
 	background: url('/images/background.png') center no-repeat;
 	background-size: cover;
 }
 
 .logo-container {
 	height: 50%;
-	padding-top: 115px;
+	padding-top: 16vh; //115px;
 }
 
 .logo {
-	height: 200px;
+	height: 28vh; //200px;
 	padding: 0;
 	background: url('/images/logo.png') center no-repeat;
 	background-size: contain;
@@ -98,7 +104,7 @@ body {
 
 .icon-container {
 	height: 40%;
-	margin-top: -15px;
+	margin-top: -1vh; //-15px;
 	padding: 0;
 	.to-center {
 		text-align: center;
@@ -124,7 +130,7 @@ body {
 	border-radius: 50%;
 	height: 63px;
 	width: 63px;
-	margin-top: 30px;
+	margin-top: 4vh; //30px;
 	&:hover {
 		cursor: pointer;
 	}
@@ -166,7 +172,7 @@ body {
 }
 
 .scroll-container {
-	height: 70px;
+	height: 10vh; //70px;
 	.scroll {
 		height:100%;
 		width: 30px;
@@ -192,16 +198,16 @@ body {
 
 .page-header {
 	background-color: $white;
-	height: 55px;
+	height: 8vh; //55px;
 	margin: 1px;
-	margin-bottom: 20px;
+	margin-bottom: 6vh; //20px;
 	.header-container {
 		text-align: center;
 		position: relative;
 		padding-right: 137px;
 		div {
 			display: inline-block;
-			height: 40px;
+			height: 5vh; //40px;
 		}
 		#about-icon {
 			width: 40px;
@@ -214,13 +220,10 @@ body {
 		.header-text {
 			position: absolute;
 			top: 50%;
-			margin-top: -10px;
+			margin-top: -1.4vh; //-10px;
 			font-family: 'NexaBold';
 			font-size: 20px;
 			color: $lightBlue;
-			span {
-				margin-bottom: 10px;
-			}
 		}
 	}
 }
@@ -236,18 +239,18 @@ body {
 		}
 	}
 	.header-text {
-		margin-bottom: 10px;
+		margin-bottom: 1.8vh; //10px;
 		span {
 			display: block;
 		}
 		.header {
 			font-family: 'Quicksand';
-			font-size: 24px;
+			font-size: 5vh; //24px;
 			color: $white;
 		}
 		.sub-header {
 			font-family: 'QuicksandBold';
-			font-size: 14px;
+			font-size: 2vh; //14px;
 			color: $yellow;
 		}
 	}
@@ -257,10 +260,10 @@ body {
 			list-style-type: circle;
 			padding-left: 5px;
 			li {
-				margin-top: 10px;
+				margin-top: 1.6vh; //10px;
 			}
 		}
-		font-size: 12px;
+		font-size: 1.8vh; //12px;
 		color: $white;
 		font-family: 'RobotoLight';
 		border-top: 1px solid rgba(255, 255, 255, .5);
@@ -424,7 +427,7 @@ body {
 @media (min-width: 342px) {
 	.icon-container {
 		height: 37%;
-		margin-top: 0px;
+		margin-top: 0vh; //0px;
 	}
 }
 
@@ -445,14 +448,14 @@ body {
 	.info-section {
 		.header-text {
 			.header {
-				font-size: 30px;
+				font-size: 5vh; //30px;
 			}
 			.sub-header {
-				font-size: 16px;
+				font-size: 2.3vh; //16px;
 			}
 		}
 		.lower-text {
-			font-size: 14px;
+			font-size: 2vh; //14px;
 		}
 	}
 }
@@ -464,33 +467,33 @@ body {
 	.info-section {
 		.header-text {
 			.header {
-				font-size: 50px;
+				font-size: 7vh; //50px;
 			}
 			.sub-header {
-				font-size: 16px;
+				font-size: 2.3vh; //16px;
 			}
 		}
 		.lower-text {
-			font-size: 16px;
+			font-size: 2.3vh; //16px;
 		}
 	}
 }
 
 @media (min-width: 1015px) {
 	.page-header {
-		margin-bottom: 55px;
+		margin-bottom: 8vh; //55px;
 	}
 	.info-section {
 		.header-text {
 			.header {
-				font-size: 70px;
+				font-size: 10vh; //70px;
 			}
 			.sub-header {
-				font-size: 24px;
+				font-size: 3.4vh; //24px;
 			}
 		}
 		.lower-text {
-			font-size: 20px;
+			font-size: 2.75vh; //20px;
 		}
 	}
 }

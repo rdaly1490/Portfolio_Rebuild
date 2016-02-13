@@ -1,4 +1,4 @@
-// var $ = require('jquery');
+var $ = require('jquery');
 
 // const doc = document.documentElement;
 // const top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
