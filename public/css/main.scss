@@ -281,6 +281,16 @@ body {
 	background-color: $red;
 }
 
+#work-icon {
+	margin-left: -42px;
+	width: 40px;
+	background: url('/images/projects.png') center no-repeat;
+	background-size: contain;
+}
+
+#work-text {
+	color: $red;
+}
 ///////////////////////////////////////
 ////////////// Contact ///////////////
 //////////////////////////////////////
@@ -297,6 +307,10 @@ body {
 	width: 40px;
 	background: url('/images/contact.png') center no-repeat;
 	background-size: contain;
+}
+
+#contact-text {
+	color: $green;
 }
 
 .bottom-main-image {

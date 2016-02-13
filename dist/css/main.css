@@ -188,6 +188,15 @@ body {
   background-size: cover;
   background-color: #E64D3D; }
 
+#work-icon {
+  margin-left: -42px;
+  width: 40px;
+  background: url("/images/projects.png") center no-repeat;
+  background-size: contain; }
+
+#work-text {
+  color: #E64D3D; }
+
 #contact-page {
   background: url("/images/overlay.png") center no-repeat;
   padding: 0px;
@@ -199,6 +208,9 @@ body {
   width: 40px;
   background: url("/images/contact.png") center no-repeat;
   background-size: contain; }
+
+#contact-text {
+  color: #1BBC9C; }
 
 .bottom-main-image {
   display: none;
