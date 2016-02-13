@@ -28,6 +28,28 @@ $(document).ready(function(){
 		]
 	});
 
+	const animateScroll = (elementId, speed=1000) => {
+		$('html, body').animate({
+        	scrollTop: $(`#${elementId}`).offset().top
+    	}, speed);
+	}
+
+	// HomePage Buttons
+
+	$('#about').on('click', () => {
+		animateScroll('about-page');
+	});
+
+	$('#work').on('click', () => {
+		animateScroll('work-page');
+	});
+
+	$('#contact').on('click', () => {
+		animateScroll('contact-page');
+	});
+
+	// Carousel Buttons
+
 	$('#prev-arrow').on('mouseenter', (e) => {
 		e.target.src = '/images/prev-hover.png';
 	});

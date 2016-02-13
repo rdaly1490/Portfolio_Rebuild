@@ -12533,6 +12533,30 @@ $(document).ready(function () {
 		}]
 	});
 
+	var animateScroll = function animateScroll(elementId) {
+		var speed = arguments.length <= 1 || arguments[1] === undefined ? 1000 : arguments[1];
+
+		$('html, body').animate({
+			scrollTop: $('#' + elementId).offset().top
+		}, speed);
+	};
+
+	// HomePage Buttons
+
+	$('#about').on('click', function () {
+		animateScroll('about-page');
+	});
+
+	$('#work').on('click', function () {
+		animateScroll('work-page');
+	});
+
+	$('#contact').on('click', function () {
+		animateScroll('contact-page');
+	});
+
+	// Carousel Buttons
+
 	$('#prev-arrow').on('mouseenter', function (e) {
 		e.target.src = '/images/prev-hover.png';
 	});
