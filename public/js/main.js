@@ -1,5 +1,5 @@
-var $ = require('jquery');
-var slick = require('slick-carousel');
+const $ = require('jquery');
+const slick = require('slick-carousel');
 
 $(document).ready(function(){
 	$('.work-carousel').slick({
@@ -61,6 +61,17 @@ $(document).ready(function(){
 	});
 	$('#next-arrow').on('mouseleave', (e) => {
 		e.target.src = '/images/next.png';
+	});
+
+	// On Scroll next page
+
+	const pagesArray = ['main-page','about-page','work-page','contact-page'];
+
+	$(window).on('scroll', (e) => {
+		//check wheel delta for +/-
+		//dont forget chrome and firefox call it different names because....reasons
+		//check what div currently in
+		// +1 or -1 array index of current div based on wheel delta
 	});
 
 });

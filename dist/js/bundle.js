@@ -12569,6 +12569,17 @@ $(document).ready(function () {
 	$('#next-arrow').on('mouseleave', function (e) {
 		e.target.src = '/images/next.png';
 	});
+
+	// On Scroll next page
+
+	var pagesArray = ['main-page', 'about-page', 'work-page', 'contact-page'];
+
+	$(window).on('scroll', function (e) {
+		//check wheel delta for +/-
+		//dont forget chrome and firefox call it different names because....reasons
+		//check what div currently in
+		// +1 or -1 array index of current div based on wheel delta
+	});
 });
 
 },{"jquery":1,"slick-carousel":2}]},{},[3])
