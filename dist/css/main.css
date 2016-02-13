@@ -147,7 +147,7 @@ body {
       top: 50%;
       margin-top: -1.4vh;
       font-family: 'NexaBold';
-      font-size: 20px;
+      font-size: 2.8vh;
       color: #0398B0; }
 
 .info-section {
@@ -184,6 +184,7 @@ body {
 
 #work-page {
   background: url("/images/overlay.png") center no-repeat;
+  padding: 0px;
   background-size: cover;
   background-color: #E64D3D; }
 
@@ -201,13 +202,11 @@ body {
 
 .bottom-main-image {
   display: none;
-  height: 350px;
-  width: 350px;
   background: url("/images/developer-on-desk.png") center no-repeat;
   background-size: contain; }
 
 .center-contacts {
-  width: 400px;
+  max-width: 400px;
   height: 100%;
   margin: 0 auto;
   position: relative; }
@@ -219,53 +218,53 @@ body {
   position: relative; }
   .contact-squares .email {
     position: absolute;
-    top: 230px;
+    top: 32.5vh;
     left: -20px;
     transform: rotate(-4deg);
     z-index: 1;
     background-color: white;
-    height: 125px;
+    height: 17.75vh;
     width: 200px;
     border-radius: 5px; }
     .contact-squares .email .contact-image-container {
-      border-left: 1px dashed #E64D3D;
-      border-right: 1px dashed #E64D3D;
-      border-top: 1px dashed #E64D3D;
+      border-left: 2px dashed #E64D3D;
+      border-right: 2px dashed #E64D3D;
+      border-top: 2px dashed #E64D3D;
       height: 80%;
-      padding-top: 25px; }
+      padding-top: 4vh; }
       .contact-squares .email .contact-image-container .contact-image {
-        height: 50px;
+        height: 7vh;
         width: 50px;
         background: url("/images/gmail.png") center no-repeat;
         background-size: contain;
         margin: 0 auto; }
     .contact-squares .email .bottom-title {
       font-family: 'NexaBold';
-      font-size: 14px;
+      font-size: 2vh;
       color: white;
       text-align: center;
       width: 100%;
-      height: 25px;
-      line-height: 25px;
+      height: 3.7vh;
+      line-height: 3.7vh;
       border-radius: 0px 0px 5px 5px;
       background-color: #E64D3D; }
       .contact-squares .email .bottom-title span {
         vertical-align: middle; }
   .contact-squares .social-media {
     position: absolute;
-    top: 342px;
+    top: 48.5vh;
     left: 15px;
     transform: rotate(2deg);
     background-color: white;
-    height: 125px;
+    height: 17.75vh;
     width: 200px;
     border-radius: 5px; }
     .contact-squares .social-media .social-media-images-container {
       height: 80%;
-      padding-top: 30px; }
+      padding-top: 4.2vh; }
       .contact-squares .social-media .social-media-images-container .social-media-images {
         margin: 0 auto;
-        height: 50px;
+        height: 7vh;
         width: 150px; }
         .contact-squares .social-media .social-media-images-container .social-media-images .github {
           display: inline-block;
@@ -290,14 +289,14 @@ body {
           cursor: pointer; }
     .contact-squares .social-media .bottom-title {
       font-family: 'NexaBold';
-      font-size: 14px;
+      font-size: 2vh;
       color: #34485E;
       text-align: center;
       width: 100%;
-      height: 25px;
+      height: 3.7vh;
       background-color: #FFD638;
       border-radius: 0px 0px 5px 5px;
-      line-height: 25px; }
+      line-height: 3.7vh; }
       .contact-squares .social-media .bottom-title span {
         vertical-align: middle; }
 
@@ -322,7 +321,7 @@ body {
 
 @media (min-width: 700px) {
   .page-header {
-    margin-bottom: 75px; }
+    margin-bottom: 10.5vh; }
   .info-section .header-text .header {
     font-size: 7vh; }
   .info-section .header-text .sub-header {
@@ -344,101 +343,85 @@ body {
   .bottom-main-image {
     display: inline-block;
     position: absolute;
-    top: 200px;
-    left: -120px; }
-  .contact-squares {
-    position: static; }
-    .contact-squares .email {
-      top: 240px;
-      left: 260px; }
-    .contact-squares .social-media {
-      top: 352px;
-      left: 295px; } }
-
-@media (min-width: 700px) {
-  .bottom-main-image {
-    height: 400px;
+    height: 45vh;
     width: 400px;
-    left: -180px; }
+    top: 28.5vh;
+    left: -160px; }
   .contact-squares {
     position: static;
     width: 400px; }
     .contact-squares .email {
-      height: 175px;
-      width: 325px;
-      top: 240px;
-      left: 240px; }
+      height: 22.6vh;
+      width: 270px;
+      top: 31.2vh;
+      left: 228px; }
       .contact-squares .email .contact-image-container {
         height: 70%;
-        padding-top: 35px; }
+        padding-top: 4vh; }
         .contact-squares .email .contact-image-container .contact-image {
           height: 60px;
           width: 60px; }
       .contact-squares .email .bottom-title {
-        font-size: 18px;
+        font-size: 2.5vh;
         width: 100%;
-        height: 52px;
-        line-height: 52px; }
+        height: 6.75vh;
+        line-height: 6.75vh; }
         .contact-squares .email .bottom-title span {
           vertical-align: middle; }
     .contact-squares .social-media {
-      height: 175px;
-      width: 325px;
-      top: 398px;
-      left: 295px; }
+      height: 22.6vh;
+      width: 270px;
+      top: 52.3vh;
+      left: 257px; }
       .contact-squares .social-media .social-media-images-container {
         height: 70%;
-        padding-top: 43px; }
+        padding-top: 5.4vh; }
         .contact-squares .social-media .social-media-images-container .social-media-images {
           width: 200px; }
       .contact-squares .social-media .bottom-title {
-        font-size: 18px;
+        font-size: 3vh;
         width: 100%;
-        height: 52px;
-        line-height: 52px; }
+        height: 6.75vh;
+        line-height: 6.75vh; }
         .contact-squares .social-media .bottom-title span {
           vertical-align: middle; } }
 
-@media (min-width: 1100px) {
+@media (min-width: 1036px) {
   .bottom-main-image {
-    height: 400px;
-    width: 400px;
-    left: -180px; }
+    height: 59vh;
+    left: -220px; }
   .contact-squares {
     position: static;
     width: 400px; }
     .contact-squares .email {
-      height: 175px;
+      height: 25vh;
       width: 325px;
-      top: 240px;
+      top: 31.2vh;
       left: 240px; }
       .contact-squares .email .contact-image-container {
         height: 70%;
-        padding-top: 35px; }
-        .contact-squares .email .contact-image-container .contact-image {
-          height: 60px;
-          width: 60px; }
+        padding-top: 5vh; }
       .contact-squares .email .bottom-title {
-        font-size: 18px;
+        font-size: 3vh;
         width: 100%;
-        height: 52px;
-        line-height: 52px; }
+        height: 7.5vh;
+        line-height: 7.5vh; }
         .contact-squares .email .bottom-title span {
           vertical-align: middle; }
     .contact-squares .social-media {
-      height: 175px;
+      height: 25vh;
       width: 325px;
-      top: 398px;
+      top: 53.6vh;
       left: 295px; }
       .contact-squares .social-media .social-media-images-container {
         height: 70%;
-        padding-top: 43px; }
+        padding-top: 6vh; }
         .contact-squares .social-media .social-media-images-container .social-media-images {
           width: 200px; }
       .contact-squares .social-media .bottom-title {
-        font-size: 18px;
+        font-size: 3vh;
         width: 100%;
-        height: 52px;
-        line-height: 52px; }
+        height: 7.5vh;
+        line-height: 7.5vh; }
         .contact-squares .social-media .bottom-title span {
           vertical-align: middle; } }

@@ -222,7 +222,7 @@ body {
 			top: 50%;
 			margin-top: -1.4vh; //-10px;
 			font-family: 'NexaBold';
-			font-size: 20px;
+			font-size: 2.8vh; //20px;
 			color: $lightBlue;
 		}
 	}
@@ -276,6 +276,7 @@ body {
 
 #work-page {
 	background: url('/images/overlay.png') center no-repeat;
+	padding: 0px;
 	background-size: cover;
 	background-color: $red;
 }
@@ -300,14 +301,12 @@ body {
 
 .bottom-main-image {
 	display: none;
-	height: 350px;
-	width: 350px;
 	background: url('/images/developer-on-desk.png') center no-repeat;
 	background-size: contain;
 }
 
 .center-contacts {
-	width: 400px;
+	max-width: 400px;
 	height: 100%;
 	margin: 0 auto;
 	position: relative;
@@ -320,22 +319,22 @@ body {
 	position: relative;
 	.email {
 		position: absolute;
-		top: 230px;
+		top: 32.5vh; //230px;
 		left: -20px;
 		transform: rotate(-4deg);
 		z-index: 1;
 		background-color: $white;
-		height: 125px;
+		height: 17.75vh; //125px;
 		width: 200px;
 		border-radius: 5px;
 		.contact-image-container {
-			border-left: 1px dashed $red;
-			border-right: 1px dashed $red;
-			border-top: 1px dashed $red;
+			border-left: 2px dashed $red;
+			border-right: 2px dashed $red;
+			border-top: 2px dashed $red;
 			height: 80%;
-			padding-top: 25px;
+			padding-top: 4vh; //25px;
 			.contact-image {
-				height: 50px;
+				height: 7vh; //50px;
 				width: 50px;
 				background: url('/images/gmail.png') center no-repeat;
 				background-size: contain;
@@ -344,12 +343,12 @@ body {
 		}
 		.bottom-title {
 			font-family: 'NexaBold';
-			font-size: 14px;
+			font-size: 2vh; //14px;
 			color: $white;
 			text-align: center;
 			width: 100%;
-			height: 25px;
-			line-height: 25px;
+			height: 3.7vh; //25px;
+			line-height: 3.7vh; //25px;
 			border-radius: 0px 0px 5px 5px;
 			background-color: $red;
 			span {
@@ -359,19 +358,19 @@ body {
 	}
 	.social-media {
 		position: absolute;
-		top: 342px;
+		top: 48.5vh; //342px;
 		left: 15px;
 		transform: rotate(2deg);
 		background-color: $white;
-		height: 125px;
+		height: 17.75vh; //125px;
 		width: 200px;
 		border-radius: 5px;
 		.social-media-images-container {
 			height: 80%;
-			padding-top: 30px;
+			padding-top: 4.2vh; //30px;
 			.social-media-images {
 				margin: 0 auto;
-				height: 50px;
+				height: 7vh; //50px;
 				width: 150px;
 				.github {
 					display: inline-block;
@@ -401,14 +400,14 @@ body {
 		}
 		.bottom-title {
 			font-family: 'NexaBold';
-			font-size: 14px;
+			font-size: 2vh; //14px;
 			color: $darkBlue;
 			text-align: center;
 			width: 100%;
-			height: 25px;
+			height: 3.7vh; //25px;
 			background-color: $yellow;
 			border-radius: 0px 0px 5px 5px;
-			line-height: 25px;
+			line-height: 3.7vh; //25px;
 			span {
 				vertical-align: middle;
 			}
@@ -423,7 +422,6 @@ body {
 //////// Main Media Queries //////////
 //////////////////////////////////////
 
-// 365px is when logo grows to max width *******
 @media (min-width: 342px) {
 	.icon-container {
 		height: 37%;
@@ -462,7 +460,7 @@ body {
 
 @media (min-width: 700px) {
 	.page-header {
-		margin-bottom: 75px;
+		margin-bottom: 10.5vh; //75px;
 	}
 	.info-section {
 		.header-text {
@@ -499,78 +497,61 @@ body {
 }
 
 ///////////////////////////////////////
-//////// About Media Queries /////////
+/////// Contact Media Queries ////////
 //////////////////////////////////////
 
 @media (min-width: 700px) {
 	.bottom-main-image {
 		display: inline-block;
 		position: absolute;
-		top: 200px;
-		left: -120px;
-	}
-	.contact-squares {
-		position: static;
-		.email {
-			top: 240px;
-			left: 260px;
-		}
-		.social-media {
-			top: 352px;
-			left: 295px;
-		}
-	}
-}
-
-@media (min-width: 700px) {
-	.bottom-main-image {
-		height: 400px;
+		height: 45vh; //400px;
 		width: 400px;
-		left: -180px;
+		top: 28.5vh; //200px;
+		left: -160px;
 	}
 	.contact-squares {
 		position: static;
 		width: 400px;
 		.email {
-			height: 175px;
-			width: 325px;
-			top: 240px;
-			left: 240px;
+			height: 22.6vh; //160px;
+			width: 270px;
+			top: 31.2vh; //220px;
+			left: 228px;
 			.contact-image-container {
 				height: 70%;
-				padding-top: 35px;
+				padding-top: 4vh; //35px;
 				.contact-image {
 					height: 60px;
 					width: 60px;
 				}
 			}
 			.bottom-title {
-				font-size: 18px;
+				font-size: 2.5vh; //18px;
 				width: 100%;
-				height: 52px;
-				line-height: 52px;
+				height: 6.75vh; //52px;
+				line-height: 6.75vh; //52px;
 				span {
 					vertical-align: middle;
 				}
 			}
 		}
 		.social-media {
-			height: 175px;
-			width: 325px;
-			top: 398px;
-			left: 295px;
+			height: 22.6vh; //160px;
+			width: 270px;
+			top: 52.3vh; //369px;
+			left: 257px;
 			.social-media-images-container {
 				height: 70%;
-				padding-top: 43px;
+				padding-top: 5.4vh; //43px;
 				.social-media-images {
 					width: 200px;
 				}
 			}
 			.bottom-title {
-				font-size: 18px;
+				font-size: 3vh; //18px;
 				width: 100%;
-				height: 52px;
-				line-height: 52px;
+				height: 6.75vh; //52px;
+				line-height: 6.75vh; //52px;
 				span {
 					vertical-align: middle;
 				}
@@ -579,55 +560,50 @@ body {
 	}
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1036px) {
 	.bottom-main-image {
-		height: 400px;
-		width: 400px;
-		left: -180px;
+		height: 59vh; //400px;
+		left: -220px;
 	}
 	.contact-squares {
 		position: static;
 		width: 400px;
 		.email {
-			height: 175px;
+			height: 25vh; //175px;
 			width: 325px;
-			top: 240px;
+			top: 31.2vh; //220px;
 			left: 240px;
 			.contact-image-container {
 				height: 70%;
-				padding-top: 35px;
-				.contact-image {
-					height: 60px;
-					width: 60px;
-				}
+				padding-top: 5vh; //35px;
 			}
 			.bottom-title {
-				font-size: 18px;
+				font-size: 3vh; //18px;
 				width: 100%;
-				height: 52px;
-				line-height: 52px;
+				height: 7.5vh; //52px;
+				line-height: 7.5vh; //52px;
 				span {
 					vertical-align: middle;
 				}
 			}
 		}
 		.social-media {
-			height: 175px;
+			height: 25vh; //175px;
 			width: 325px;
-			top: 398px;
+			top: 53.6vh; //378px;
 			left: 295px;
 			.social-media-images-container {
 				height: 70%;
-				padding-top: 43px;
+				padding-top: 6vh; //43px;
 				.social-media-images {
 					width: 200px;
 				}
 			}
 			.bottom-title {
-				font-size: 18px;
+				font-size: 3vh; //18px;
 				width: 100%;
-				height: 52px;
-				line-height: 52px;
+				height: 7.5vh; //52px;
+				line-height: 7.5vh; //52px;
 				span {
 					vertical-align: middle;
 				}
