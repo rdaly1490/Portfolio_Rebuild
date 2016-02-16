@@ -17,7 +17,7 @@
 ///////////////////////////-->
 
 <div id="main-page" class="container-fluid pages">
-	<div class="col-xs-12 logo-container">
+	<div id="logo" class="col-xs-12 logo-container">
 		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 logo"></div>
 	</div>
 	<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 icon-container">
@@ -46,7 +46,7 @@
 	</div>
 	<div class="info-section">
 		<div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 my-picture">
-			<img src="/images/rob.png" />
+			<img id="my-pic" src="/images/rob.png" />
 		</div>
 		<div class="col-xs-12 col-sm-10 col-sm-offset-1 header-text">
 			<span class="header">Hi, I'm Rob</span>
@@ -79,7 +79,27 @@
 		</div>
 	</div>
 	<div class="col-xs-12 col-sm-10 col-sm-offset-1 work-carousel">
-		<div>your content</div>
+		<div class="slide">
+			<div class="col-xs-12 project-image-container">
+				<div class="project-image-iobrew"></div>
+				<div class="project-link-btns">
+					<div class="code-repo">
+						<div class="code-repo-img"></div>
+					</div>
+					<div class="live-site">
+						<div class="live-site-img"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 project-text">
+				<div class="title"><span>ioBrew</span><span class="type">Web Application</span></div>
+				<ul class="description">
+					<li>ioBrew is a webapp I created for keeping track of drinks owed between friends in a fun, social way Some of the features are cross user functionality, achievement tracking, and automatic email reminders, just to name a few. For this project I built out both the frontend and the backend, along with creating the web page's design.</li>
+					<li><span class="technologies">Front end:</span><span>React, jQuery, Backbone, Bootstrap</span></li>
+					<li><span class="technologies">Back end:</span><span>Node, Express, MongoDB, Mongoose</span></li>
+				</ul>
+			</div>
+		</div>
 		<div>your content</div>
 		<div>your content</div>
 	</div>
@@ -99,7 +119,7 @@
 	</div>
 	<div class="center-contacts">
 		<div class="bottom-main-image"></div>
-		<div class="contact-squares">
+		<div id="contact-me" class="contact-squares">
 			<div class="email">
 				<div class="contact-image-container">
 					<div class="contact-image"></div>

@@ -1,4 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+!function(factory){"function"==typeof define&&define.amd?define(["jquery"],factory):"object"==typeof exports?module.exports=factory(require("jquery")):factory(jQuery)}(function($){var dispatch=$.event.dispatch||$.event.handle,special=$.event.special,uid1="D"+ +new Date,uid2="D"+(+new Date+1);special.scrollstart={setup:function(data){var timer,_data=$.extend({latency:special.scrollstop.latency},data),handler=function(evt){var _self=this,_args=arguments;timer?clearTimeout(timer):(evt.type="scrollstart",dispatch.apply(_self,_args)),timer=setTimeout(function(){timer=null},_data.latency)};$(this).bind("scroll",handler).data(uid1,handler)},teardown:function(){$(this).unbind("scroll",$(this).data(uid1))}},special.scrollstop={latency:250,setup:function(data){var timer,_data=$.extend({latency:special.scrollstop.latency},data),handler=function(evt){var _self=this,_args=arguments;timer&&clearTimeout(timer),timer=setTimeout(function(){timer=null,evt.type="scrollstop",dispatch.apply(_self,_args)},_data.latency)};$(this).bind("scroll",handler).data(uid2,handler)},teardown:function(){$(this).unbind("scroll",$(this).data(uid2))}}});
+},{"jquery":2}],2:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.2.0
  * http://jquery.com/
@@ -9831,7 +9833,7 @@ if ( !noGlobal ) {
 return jQuery;
 }));
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
@@ -12503,11 +12505,12 @@ return jQuery;
 
 }));
 
-},{"jquery":1}],3:[function(require,module,exports){
+},{"jquery":2}],4:[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
 var slick = require('slick-carousel');
+require('jquery-scrollstop');
 
 $(document).ready(function () {
 	$('.work-carousel').slick({
@@ -12555,6 +12558,10 @@ $(document).ready(function () {
 		animateScroll('contact-page');
 	});
 
+	$('.scroll').on('click', function () {
+		animateScroll('about-page');
+	});
+
 	// Carousel Buttons
 
 	$('#prev-arrow').on('mouseenter', function (e) {
@@ -12570,17 +12577,84 @@ $(document).ready(function () {
 		e.target.src = '/images/next.png';
 	});
 
+	// sets latency in ms for when scrollStop event is fired after user stops scolling
+	$.event.special.scrollstop.latency = 300;
+
 	// On Scroll next page
 
 	var pagesArray = ['main-page', 'about-page', 'work-page', 'contact-page'];
 
-	$(window).on('scroll', function (e) {
-		//check wheel delta for +/-
-		//dont forget chrome and firefox call it different names because....reasons
-		//check what div currently in
-		// +1 or -1 array index of current div based on wheel delta
-	});
+	// set wheelDelta value in normal jquery scroll event
+	// let wheelDelta;
+	// let currentPage;
+	// $(window).on('mousewheel DOMMouseScroll', (e) => {
+	// 	wheelDelta = e.originalEvent.wheelDelta;
+	// 	// currentPage = checkCurrentPage();
+	// });
+
+	// // use scrollstop plugin to capture wheelDelta on scroll start and change pages accordingly
+	// $(window).on('scrollstart', () => {
+	// 	const currentPage = checkCurrentPage();
+	// 	console.log(currentPage);
+	// 	if (currentPage) {
+	// 		const currentPageIndex = pagesArray.indexOf(currentPage);
+	// 		if (wheelDelta > 0) {
+	// 			animateScroll(pagesArray[currentPageIndex - 1]);
+	// 		} else {
+	// 			animateScroll(pagesArray[currentPageIndex + 1]);
+	// 		}
+	// 	}
+	// });
+
+	function isElementInViewport(el) {
+
+		if (typeof jQuery === "function" && el instanceof jQuery) {
+			el = el[0];
+		}
+
+		var rect = el.getBoundingClientRect();
+
+		return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+		rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+		;
+	}
+
+	function checkCurrentPage() {
+		var visiblePage = undefined;
+		if (isElementInViewport(document.getElementById('logo'))) {
+			visiblePage = 'main-page';
+		} else if (isElementInViewport(document.getElementById('my-pic'))) {
+			visiblePage = 'about-page';
+		} else if (isElementInViewport(document.getElementById('test'))) {
+			visiblePage = 'work-page';
+		} else if (isElementInViewport(document.getElementById('contact-me'))) {
+			visiblePage = 'contact-page';
+		} else {
+			visiblePage = null;
+		}
+
+		return visiblePage;
+	}
+
+	// function onVisibilityChange(el, callback) {
+	//     var old_visible;
+	//     return function () {
+	//         var visible = isElementInViewport(el);
+	//         if (visible != old_visible) {
+	//             old_visible = visible;
+	//             if (typeof callback == 'function') {
+	//                 callback();
+	//             }
+	//         }
+	//     }
+	// }
+
+	// var handler = onVisibilityChange(el, function() {
+
+	// });
+
+	// $(window).on('DOMContentLoaded load resize scroll', handler);
 });
 
-},{"jquery":1,"slick-carousel":2}]},{},[3])
+},{"jquery":2,"jquery-scrollstop":1,"slick-carousel":3}]},{},[4])
 //# sourceMappingURL=main.js.map
