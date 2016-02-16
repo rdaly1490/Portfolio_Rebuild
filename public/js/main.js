@@ -20,7 +20,7 @@ $(document).ready(function(){
 				}
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 545,
 				settings: {
 					arrows: false,
 		

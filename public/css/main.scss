@@ -385,6 +385,7 @@ body {
 					padding-bottom: 5px;
 					font-family: 'RobotoLight';
 					color: rgba(255,255,255,0.7);
+					font-size: 2.3vh;
 					span {
 						display: block;
 					}
@@ -644,6 +645,74 @@ body {
 		}
 		.lower-text {
 			font-size: 2.75vh; //20px;
+		}
+	}
+}
+
+///////////////////////////////////////
+//////// Work Media Queries //////////
+//////////////////////////////////////
+@media (min-width: 479px) {
+	.work-carousel {
+		.slide {
+			.project-image-container {
+				.project-image-iobrew {
+					background: url('/images/iobrewmobile.png') center no-repeat;
+					background-size: auto;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 544px) {
+	.work-carousel {
+		.slide {
+			.project-text {
+				.title {
+					width: 80%;
+					margin: 0 auto;
+					height: 20%;
+					font-size: 8vh;
+					.type {
+						font-size: 2.5vh;
+					}
+				}
+				.description {
+					width: 80%;
+					margin: 0 auto;
+					height: 80%;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 680px) {
+	.work-carousel {
+		.slide {
+			.project-text {
+				.description {
+					li {
+						font-size: 2.5vh;
+					}
+				}
+			}
+		}
+	}
+}
+
+// here we go to side-by-side divs
+@media (min-width: 680px) {
+	.work-carousel {
+		.slide {
+			.project-text {
+				.description {
+					li {
+						font-size: 2.5vh;
+					}
+				}
+			}
 		}
 	}
 }

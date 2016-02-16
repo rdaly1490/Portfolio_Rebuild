@@ -277,7 +277,8 @@ body {
           padding-top: 5px;
           padding-bottom: 5px;
           font-family: 'RobotoLight';
-          color: rgba(255, 255, 255, 0.7); }
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 2.3vh; }
           .work-carousel .slide .project-text .description li span {
             display: block; }
           .work-carousel .slide .project-text .description li .technologies {
@@ -455,6 +456,32 @@ body {
     font-size: 3.4vh; }
   .info-section .lower-text {
     font-size: 2.75vh; } }
+
+@media (min-width: 479px) {
+  .work-carousel .slide .project-image-container .project-image-iobrew {
+    background: url("/images/iobrewmobile.png") center no-repeat;
+    background-size: auto; } }
+
+@media (min-width: 544px) {
+  .work-carousel .slide .project-text .title {
+    width: 80%;
+    margin: 0 auto;
+    height: 20%;
+    font-size: 8vh; }
+    .work-carousel .slide .project-text .title .type {
+      font-size: 2.5vh; }
+  .work-carousel .slide .project-text .description {
+    width: 80%;
+    margin: 0 auto;
+    height: 80%; } }
+
+@media (min-width: 680px) {
+  .work-carousel .slide .project-text .description li {
+    font-size: 2.5vh; } }
+
+@media (min-width: 680px) {
+  .work-carousel .slide .project-text .description li {
+    font-size: 2.5vh; } }
 
 @media (min-width: 700px) {
   .bottom-main-image {
