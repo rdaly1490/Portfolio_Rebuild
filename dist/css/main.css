@@ -229,6 +229,10 @@ body {
             border-radius: 50%;
             border: 1px solid white;
             float: right; }
+            .work-carousel .slide .project-image-container .project-link-btns .code-repo .code-repo-img:hover {
+              background-image: url("/images/git-hover.png");
+              background-color: white;
+              cursor: pointer; }
         .work-carousel .slide .project-image-container .project-link-btns .live-site {
           height: 100%;
           width: 45%;
@@ -240,6 +244,10 @@ body {
             border-radius: 50%;
             border: 1px solid white;
             float: left; }
+            .work-carousel .slide .project-image-container .project-link-btns .live-site .live-site-img:hover {
+              background-image: url("/images/link-hover.png");
+              background-color: white;
+              cursor: pointer; }
     .work-carousel .slide .project-text {
       height: 57vh;
       width: 100%;
@@ -262,7 +270,8 @@ body {
         text-align: left;
         height: 90%;
         width: 100%;
-        padding-left: 20px; }
+        padding-left: 20px;
+        list-style-type: circle; }
         .work-carousel .slide .project-text .description li {
           border-top: 1px solid rgba(255, 255, 255, 0.6);
           padding-top: 5px;

@@ -324,7 +324,12 @@ body {
 						background: url('/images/git.png') center no-repeat;
 						border-radius: 50%;
 						border: 1px solid $white;
-						float: right;			
+						float: right;	
+						&:hover {
+							background-image: url('/images/git-hover.png');
+							background-color: $white;
+							cursor: pointer;
+						}		
 					}
 				}
 				.live-site {
@@ -338,6 +343,11 @@ body {
 						border-radius: 50%;
 						border: 1px solid $white;
 						float: left;
+						&:hover {
+							background-image: url('/images/link-hover.png');
+							background-color: $white;
+							cursor: pointer;
+						}
 					}
 				}
 			}
@@ -368,6 +378,7 @@ body {
 				height: 90%;
 				width: 100%;
 				padding-left: 20px;
+				list-style-type: circle;
 				li {
 					border-top: 1px solid rgba(255,255,255,0.6);
 					padding-top: 5px;
