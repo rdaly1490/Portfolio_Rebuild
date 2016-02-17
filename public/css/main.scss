@@ -71,7 +71,6 @@ body {
 
 .pages {
 	height: 100vh;
-	// width: 100vw; // do i need these here?
 
 	//XXXX IMPORTANT XXXX
 	// later might need to do something like if viewportHeight > x or media queries
@@ -85,18 +84,18 @@ body {
 //////////////////////////////////////
 
 #main-page {
-	padding: 4vh 0vh 0vh 0vh; //20px 0px 0px 0px
+	padding: 4vh 0vh 0vh 0vh;
 	background: url('/images/background.png') center no-repeat;
 	background-size: cover;
 }
 
 .logo-container {
 	height: 50%;
-	padding-top: 16vh; //115px;
+	padding-top: 16vh;
 }
 
 .logo {
-	height: 28vh; //200px;
+	height: 28vh;
 	padding: 0;
 	background: url('/images/logo.png') center no-repeat;
 	background-size: contain;
@@ -104,7 +103,7 @@ body {
 
 .icon-container {
 	height: 40%;
-	margin-top: -1vh; //-15px;
+	margin-top: -1vh;
 	padding: 0;
 	.to-center {
 		text-align: center;
@@ -130,7 +129,7 @@ body {
 	border-radius: 50%;
 	height: 63px;
 	width: 63px;
-	margin-top: 4vh; //30px;
+	margin-top: 4vh;
 	&:hover {
 		cursor: pointer;
 	}
@@ -172,7 +171,7 @@ body {
 }
 
 .scroll-container {
-	height: 10vh; //70px;
+	height: 10vh;
 	.scroll {
 		height:100%;
 		width: 30px;
@@ -198,9 +197,9 @@ body {
 
 .page-header {
 	background-color: $white;
-	height: 8vh; //55px;
+	height: 8vh;
 	margin: 1px;
-	margin-bottom: 6vh; //20px;
+	margin-bottom: 6vh;
 	margin-top: -0.2vh;
 	.header-container {
 		text-align: center;
@@ -208,7 +207,7 @@ body {
 		padding-right: 137px;
 		div {
 			display: inline-block;
-			height: 5vh; //40px;
+			height: 5vh;
 		}
 		#about-icon {
 			width: 40px;
@@ -221,9 +220,9 @@ body {
 		.header-text {
 			position: absolute;
 			top: 50%;
-			margin-top: -1.4vh; //-10px;
+			margin-top: -1.4vh;
 			font-family: 'NexaBold';
-			font-size: 2.8vh; //20px;
+			font-size: 2.8vh;
 			color: $lightBlue;
 		}
 	}
@@ -240,18 +239,18 @@ body {
 		}
 	}
 	.header-text {
-		margin-bottom: 1.8vh; //10px;
+		margin-bottom: 1.8vh;
 		span {
 			display: block;
 		}
 		.header {
 			font-family: 'Quicksand';
-			font-size: 5vh; //24px;
+			font-size: 5vh;
 			color: $white;
 		}
 		.sub-header {
 			font-family: 'QuicksandBold';
-			font-size: 2vh; //14px;
+			font-size: 2vh;
 			color: $yellow;
 		}
 	}
@@ -261,10 +260,10 @@ body {
 			list-style-type: circle;
 			padding-left: 5px;
 			li {
-				margin-top: 1.6vh; //10px;
+				margin-top: 1.6vh;
 			}
 		}
-		font-size: 1.8vh; //12px;
+		font-size: 1.8vh;
 		color: $white;
 		font-family: 'RobotoLight';
 		border-top: 1px solid rgba(255, 255, 255, .5);
@@ -307,6 +306,20 @@ body {
 				width: 100%;
 				margin-top: 2vh;
 				background: url('/images/iobrewmobile.png') center no-repeat;
+				background-size: contain;
+			}
+			.project-image-fitkora {
+				height: 65%;
+				width: 100%;
+				margin-top: 2vh;
+				background: url('/images/fitkoramobilepic.png') center no-repeat;
+				background-size: contain;
+			}
+			.project-image-iron {
+				height: 65%;
+				width: 100%;
+				margin-top: 2vh;
+				background: url('/images/ironmobile.png') center no-repeat;
 				background-size: contain;
 			}
 			.project-link-btns {
@@ -417,7 +430,6 @@ body {
 		button{
 			&::before {
 			font-size: 15px;
-			// color: $white;
 			}
 		}
 	}
@@ -471,12 +483,12 @@ body {
 	position: relative;
 	.email {
 		position: absolute;
-		top: 32.5vh; //230px;
+		top: 32.5vh;
 		left: -20px;
 		transform: rotate(-4deg);
 		z-index: 1;
 		background-color: $white;
-		height: 17.75vh; //125px;
+		height: 17.75vh;
 		width: 200px;
 		border-radius: 5px;
 		.contact-image-container {
@@ -484,9 +496,9 @@ body {
 			border-right: 2px dashed $red;
 			border-top: 2px dashed $red;
 			height: 80%;
-			padding-top: 4vh; //25px;
+			padding-top: 4vh;
 			.contact-image {
-				height: 7vh; //50px;
+				height: 7vh;
 				width: 50px;
 				background: url('/images/gmail.png') center no-repeat;
 				background-size: contain;
@@ -495,12 +507,12 @@ body {
 		}
 		.bottom-title {
 			font-family: 'NexaBold';
-			font-size: 2vh; //14px;
+			font-size: 2vh;
 			color: $white;
 			text-align: center;
 			width: 100%;
-			height: 3.7vh; //25px;
-			line-height: 3.7vh; //25px;
+			height: 3.7vh;
+			line-height: 3.7vh;
 			border-radius: 0px 0px 5px 5px;
 			background-color: $red;
 			span {
@@ -510,19 +522,19 @@ body {
 	}
 	.social-media {
 		position: absolute;
-		top: 48.5vh; //342px;
+		top: 48.5vh;
 		left: 15px;
 		transform: rotate(2deg);
 		background-color: $white;
-		height: 17.75vh; //125px;
+		height: 17.75vh;
 		width: 200px;
 		border-radius: 5px;
 		.social-media-images-container {
 			height: 80%;
-			padding-top: 4.2vh; //30px;
+			padding-top: 4.2vh;
 			.social-media-images {
 				margin: 0 auto;
-				height: 7vh; //50px;
+				height: 7vh;
 				width: 150px;
 				.github {
 					display: inline-block;
@@ -552,14 +564,14 @@ body {
 		}
 		.bottom-title {
 			font-family: 'NexaBold';
-			font-size: 2vh; //14px;
+			font-size: 2vh;
 			color: $darkBlue;
 			text-align: center;
 			width: 100%;
-			height: 3.7vh; //25px;
+			height: 3.7vh;
 			background-color: $yellow;
 			border-radius: 0px 0px 5px 5px;
-			line-height: 3.7vh; //25px;
+			line-height: 3.7vh;
 			span {
 				vertical-align: middle;
 			}
@@ -577,7 +589,7 @@ body {
 @media (min-width: 342px) {
 	.icon-container {
 		height: 37%;
-		margin-top: 0vh; //0px;
+		margin-top: 0vh;
 	}
 }
 
@@ -598,52 +610,52 @@ body {
 	.info-section {
 		.header-text {
 			.header {
-				font-size: 5vh; //30px;
+				font-size: 5vh;
 			}
 			.sub-header {
-				font-size: 2.3vh; //16px;
+				font-size: 2.3vh;
 			}
 		}
 		.lower-text {
-			font-size: 2vh; //14px;
+			font-size: 2vh;
 		}
 	}
 }
 
 @media (min-width: 700px) {
 	.page-header {
-		margin-bottom: 10.5vh; //75px;
+		margin-bottom: 10.5vh;
 	}
 	.info-section {
 		.header-text {
 			.header {
-				font-size: 7vh; //50px;
+				font-size: 7vh;
 			}
 			.sub-header {
-				font-size: 2.3vh; //16px;
+				font-size: 2.3vh;
 			}
 		}
 		.lower-text {
-			font-size: 2.3vh; //16px;
+			font-size: 2.3vh;
 		}
 	}
 }
 
 @media (min-width: 1015px) {
 	.page-header {
-		margin-bottom: 8vh; //55px;
+		margin-bottom: 8vh;
 	}
 	.info-section {
 		.header-text {
 			.header {
-				font-size: 10vh; //70px;
+				font-size: 10vh;
 			}
 			.sub-header {
-				font-size: 3.4vh; //24px;
+				font-size: 3.4vh;
 			}
 		}
 		.lower-text {
-			font-size: 2.75vh; //20px;
+			font-size: 2.75vh;
 		}
 	}
 }
@@ -658,6 +670,12 @@ body {
 				.project-image-iobrew {
 					background-size: auto;
 				}
+				.project-image-fitkora {
+					background-size: auto;
+				}
+				.project-image-iron {
+					background-size: auto 28vh;
+				}
 			}
 		}
 	}
@@ -666,6 +684,20 @@ body {
 @media (min-width: 544px) {
 	.work-carousel {
 		.slide {
+			.project-image-container {
+				.project-image-iobrew {
+					margin: 2vh auto;
+					max-width: 500px;
+				}
+				.project-image-fitkora {
+					margin: 2vh auto;
+					max-width: 500px;
+				}
+				.project-image-iron {
+					margin: 2vh auto;
+					max-width: 500px;
+				}
+			}
 			.project-text {
 				.title {
 					width: 80%;
@@ -714,15 +746,41 @@ body {
 					height: 39vh;
 					background-size: 50vh 27vh;
 				}
+				.project-image-fitkora {
+					border: 3px solid white;
+					border-radius: 5px;
+					margin-top: 0vh;
+					height: 39vh;
+					background-size: 31vh 12vh;
+				}
+				.project-image-iron {
+					border: 3px solid white;
+					border-radius: 5px;
+					margin-top: 0vh;
+					height: 39vh;
+					background-size: 50vh 21vh;
+				}
 			}
 			.project-text {
 				margin-top: 19vh;
+				.title {
+					margin-left: 10px;
+					margin-right: 0px;
+				}
 				.description {
 					margin-left: 10px;
 					margin-right: 0px;
 				}
 			}
 		}
+	}
+
+	#iobrew {
+		background-color: #FFEFBC;
+	}
+
+	#iron {
+		background-color: #353533;
 	}
 }
 
@@ -731,13 +789,17 @@ body {
 		.slide {
 			.project-image-container {
 				margin-left: 8%;
+				margin-top: 21vh;
+			}
+			.project-text {
+				margin-top: 16vh;
 			}
 		}
 	}
 }
 
-#iobrew {
-	background-color: #FFEFBC;
+#fitkora {
+	background-color: white;
 }
 
 ///////////////////////////////////////
@@ -748,54 +810,54 @@ body {
 	.bottom-main-image {
 		display: inline-block;
 		position: absolute;
-		height: 45vh; //400px;
+		height: 45vh;
 		width: 400px;
-		top: 28.5vh; //200px;
+		top: 28.5vh;
 		left: -160px;
 	}
 	.contact-squares {
 		position: static;
 		width: 400px;
 		.email {
-			height: 22.6vh; //160px;
+			height: 22.6vh;
 			width: 270px;
-			top: 31.2vh; //220px;
+			top: 31.2vh;
 			left: 228px;
 			.contact-image-container {
 				height: 70%;
-				padding-top: 4vh; //35px;
+				padding-top: 4vh;
 				.contact-image {
 					height: 60px;
 					width: 60px;
 				}
 			}
 			.bottom-title {
-				font-size: 2.5vh; //18px;
+				font-size: 2.5vh;
 				width: 100%;
-				height: 6.75vh; //52px;
-				line-height: 6.75vh; //52px;
+				height: 6.75vh;
+				line-height: 6.75vh;
 				span {
 					vertical-align: middle;
 				}
 			}
 		}
 		.social-media {
-			height: 22.6vh; //160px;
+			height: 22.6vh;
 			width: 270px;
-			top: 52.3vh; //369px;
+			top: 52.3vh;
 			left: 257px;
 			.social-media-images-container {
 				height: 70%;
-				padding-top: 5.4vh; //43px;
+				padding-top: 5.4vh;
 				.social-media-images {
 					width: 200px;
 				}
 			}
 			.bottom-title {
-				font-size: 3vh; //18px;
+				font-size: 3vh;
 				width: 100%;
-				height: 6.75vh; //52px;
-				line-height: 6.75vh; //52px;
+				height: 6.75vh;
+				line-height: 6.75vh;
 				span {
 					vertical-align: middle;
 				}
@@ -806,48 +868,48 @@ body {
 
 @media (min-width: 1036px) {
 	.bottom-main-image {
-		height: 59vh; //400px;
+		height: 59vh;
 		left: -220px;
 	}
 	.contact-squares {
 		position: static;
 		width: 400px;
 		.email {
-			height: 25vh; //175px;
+			height: 25vh;
 			width: 325px;
-			top: 31.2vh; //220px;
+			top: 31.2vh;
 			left: 240px;
 			.contact-image-container {
 				height: 70%;
-				padding-top: 5vh; //35px;
+				padding-top: 5vh;
 			}
 			.bottom-title {
-				font-size: 3vh; //18px;
+				font-size: 3vh;
 				width: 100%;
-				height: 7.5vh; //52px;
-				line-height: 7.5vh; //52px;
+				height: 7.5vh;
+				line-height: 7.5vh;
 				span {
 					vertical-align: middle;
 				}
 			}
 		}
 		.social-media {
-			height: 25vh; //175px;
+			height: 25vh;
 			width: 325px;
-			top: 53.6vh; //378px;
+			top: 53.6vh;
 			left: 295px;
 			.social-media-images-container {
 				height: 70%;
-				padding-top: 6vh; //43px;
+				padding-top: 6vh;
 				.social-media-images {
 					width: 200px;
 				}
 			}
 			.bottom-title {
-				font-size: 3vh; //18px;
+				font-size: 3vh;
 				width: 100%;
-				height: 7.5vh; //52px;
-				line-height: 7.5vh; //52px;
+				height: 7.5vh;
+				line-height: 7.5vh;
 				span {
 					vertical-align: middle;
 				}

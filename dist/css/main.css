@@ -213,6 +213,18 @@ body {
         margin-top: 2vh;
         background: url("/images/iobrewmobile.png") center no-repeat;
         background-size: contain; }
+      .work-carousel .slide .project-image-container .project-image-fitkora {
+        height: 65%;
+        width: 100%;
+        margin-top: 2vh;
+        background: url("/images/fitkoramobilepic.png") center no-repeat;
+        background-size: contain; }
+      .work-carousel .slide .project-image-container .project-image-iron {
+        height: 65%;
+        width: 100%;
+        margin-top: 2vh;
+        background: url("/images/ironmobile.png") center no-repeat;
+        background-size: contain; }
       .work-carousel .slide .project-image-container .project-link-btns {
         height: 35%;
         width: 100%;
@@ -458,9 +470,22 @@ body {
 
 @media (min-width: 479px) {
   .work-carousel .slide .project-image-container .project-image-iobrew {
-    background-size: auto; } }
+    background-size: auto; }
+  .work-carousel .slide .project-image-container .project-image-fitkora {
+    background-size: auto; }
+  .work-carousel .slide .project-image-container .project-image-iron {
+    background-size: auto 28vh; } }
 
 @media (min-width: 544px) {
+  .work-carousel .slide .project-image-container .project-image-iobrew {
+    margin: 2vh auto;
+    max-width: 500px; }
+  .work-carousel .slide .project-image-container .project-image-fitkora {
+    margin: 2vh auto;
+    max-width: 500px; }
+  .work-carousel .slide .project-image-container .project-image-iron {
+    margin: 2vh auto;
+    max-width: 500px; }
   .work-carousel .slide .project-text .title {
     width: 80%;
     margin: 0 auto;
@@ -487,18 +512,40 @@ body {
       margin-top: 0vh;
       height: 39vh;
       background-size: 50vh 27vh; }
+    .work-carousel .slide .project-image-container .project-image-fitkora {
+      border: 3px solid white;
+      border-radius: 5px;
+      margin-top: 0vh;
+      height: 39vh;
+      background-size: 31vh 12vh; }
+    .work-carousel .slide .project-image-container .project-image-iron {
+      border: 3px solid white;
+      border-radius: 5px;
+      margin-top: 0vh;
+      height: 39vh;
+      background-size: 50vh 21vh; }
   .work-carousel .slide .project-text {
     margin-top: 19vh; }
+    .work-carousel .slide .project-text .title {
+      margin-left: 10px;
+      margin-right: 0px; }
     .work-carousel .slide .project-text .description {
       margin-left: 10px;
-      margin-right: 0px; } }
+      margin-right: 0px; }
+  #iobrew {
+    background-color: #FFEFBC; }
+  #iron {
+    background-color: #353533; } }
 
 @media (min-width: 1200px) {
   .work-carousel .slide .project-image-container {
-    margin-left: 8%; } }
+    margin-left: 8%;
+    margin-top: 21vh; }
+  .work-carousel .slide .project-text {
+    margin-top: 16vh; } }
 
-#iobrew {
-  background-color: #FFEFBC; }
+#fitkora {
+  background-color: white; }
 
 @media (min-width: 700px) {
   .bottom-main-image {
