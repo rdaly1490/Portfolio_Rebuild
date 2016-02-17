@@ -479,15 +479,26 @@ body {
 
 @media (min-width: 992px) {
   .work-carousel .slide .project-image-container {
-    margin-top: 28vh;
+    margin-top: 24vh;
     margin-left: 50px; }
     .work-carousel .slide .project-image-container .project-image-iobrew {
-      background-size: contain; }
+      border: 3px solid white;
+      border-radius: 5px;
+      margin-top: 0vh;
+      height: 39vh;
+      background-size: 50vh 27vh; }
   .work-carousel .slide .project-text {
-    margin-top: 18vh; }
+    margin-top: 19vh; }
     .work-carousel .slide .project-text .description {
       margin-left: 10px;
       margin-right: 0px; } }
+
+@media (min-width: 1200px) {
+  .work-carousel .slide .project-image-container {
+    margin-left: 8%; } }
+
+#iobrew {
+  background-color: #FFEFBC; }
 
 @media (min-width: 700px) {
   .bottom-main-image {
