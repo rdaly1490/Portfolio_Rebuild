@@ -35,6 +35,12 @@ body {
 .pages {
   height: 100vh; }
 
+a {
+  height: 100%;
+  width: 100%; }
+  a:focus {
+    outline: 0; }
+
 #main-page {
   padding: 4vh 0vh 0vh 0vh;
   background: url("/images/background.png") center no-repeat;
