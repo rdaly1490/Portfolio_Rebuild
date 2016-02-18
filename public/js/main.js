@@ -1,8 +1,12 @@
 const $ = require('jquery');
 const slick = require('slick-carousel');
-require('jquery-scrollstop');
+require('fullpage.js');
 
 $(document).ready(function(){
+
+	$('#fullpage').fullpage();
+
+	// need to scroll to top on refresh XXX
 	$('.work-carousel').slick({
 		dots: true,
 		infinite: true,
@@ -29,66 +33,61 @@ $(document).ready(function(){
 		]
 	});
 
-	const animateScroll = (elementId, speed=1000) => {
-		$('html, body').animate({
-        	scrollTop: $(`#${elementId}`).offset().top
-    	}, speed);
-	}
+	// const animateScroll = (elementId, speed=1000) => {
+	// 	$('html, body').animate({
+ //        	scrollTop: $(`#${elementId}`).offset().top
+ //    	}, speed);
+	// }
 
-	// HomePage Buttons
+	// // HomePage Buttons
+	// const addEventListeners = (element, eventType, cb) => {
+	// 	const scrollTo = element === '.scroll' ? 'about' : element.substr(1);
+	// 	$(`${element}`).on(eventType, () => {
+	// 		cb(`${scrollTo}-page`);
+	// 	});
+	// }
 
-	$('#about').on('click', () => {
-		animateScroll('about-page');
-	});
+	// const btnArray = ['#about', '#work', '#contact', '.scroll'];
 
-	$('#work').on('click', () => {
-		animateScroll('work-page');
-	});
+	// for (const el of btnArray) {
+	// 	addEventListeners(el, 'click', animateScroll);
+	// }
 
-	$('#contact').on('click', () => {
-		animateScroll('contact-page');
-	});
+	// // Carousel Buttons
 
-	$('.scroll').on('click', () => {
-		animateScroll('about-page');
-	});
-
-	// Carousel Buttons
-
-	$('#prev-arrow').on('mouseenter', (e) => {
-		e.target.src = '/images/prev-hover.png';
-	});
-	$('#prev-arrow').on('mouseleave', (e) => {
-		e.target.src = '/images/prev.png';
-	});
-	$('#next-arrow').on('mouseenter', (e) => {
-		e.target.src = '/images/next-hover.png';
-	});
-	$('#next-arrow').on('mouseleave', (e) => {
-		e.target.src = '/images/next.png';
-	});
-
-	// sets latency in ms for when scrollStop event is fired after user stops scolling
-	$.event.special.scrollstop.latency = 300;
-
-	// On Scroll next page
-
-	const pagesArray = ['main-page','about-page','work-page','contact-page'];
-
-	// set wheelDelta value in normal jquery scroll event
-	// let wheelDelta;
-	// let currentPage;
-	// $(window).on('mousewheel DOMMouseScroll', (e) => {
-	// 	wheelDelta = e.originalEvent.wheelDelta;
-	// 	// currentPage = checkCurrentPage();
+	// $('#prev-arrow').on('mouseenter', (e) => {
+	// 	e.target.src = '/images/prev-hover.png';
+	// });
+	// $('#prev-arrow').on('mouseleave', (e) => {
+	// 	e.target.src = '/images/prev.png';
+	// });
+	// $('#next-arrow').on('mouseenter', (e) => {
+	// 	e.target.src = '/images/next-hover.png';
+	// });
+	// $('#next-arrow').on('mouseleave', (e) => {
+	// 	e.target.src = '/images/next.png';
 	// });
 
-	// // use scrollstop plugin to capture wheelDelta on scroll start and change pages accordingly
-	// $(window).on('scrollstart', () => {
+	// sets latency in ms for when scrollStop event is fired after user stops scolling
+	// $.event.special.scrollstop.latency = 300;
+
+	// // On Scroll next page
+
+	// const pagesArray = ['main-page','about-page','work-page','contact-page'];
+
+	// // set wheelDelta value in normal jquery scroll event
+	// let wheelDelta;
+	// $(window).on('mousewheel DOMMouseScroll', (e) => {
+	// 	wheelDelta = e.originalEvent.wheelDelta;
+	// });
+
+	// // // use scrollstop plugin to capture wheelDelta on scroll start and change pages accordingly
+	// $(window).on('scrollstart', (e) => {
 	// 	const currentPage = checkCurrentPage();
-	// 	console.log(currentPage);
+	// 	console.log(e.originalEvent);
 	// 	if (currentPage) {
 	// 		const currentPageIndex = pagesArray.indexOf(currentPage);
+	// 		console.log(currentPage, currentPageIndex);
 	// 		if (wheelDelta > 0) {
 	// 			animateScroll(pagesArray[currentPageIndex - 1]);
 	// 		} else {
@@ -97,38 +96,42 @@ $(document).ready(function(){
 	// 	}
 	// });
 
-	function isElementInViewport (el) {
+	// $(window).on('scrollstop', (e) => {
+	// 	console.log(e.originalEvent);
+	// });
 
-	    if (typeof jQuery === "function" && el instanceof jQuery) {
-	        el = el[0];
-	    }
+	// function isElementInViewport (el) {
 
-	    var rect = el.getBoundingClientRect();
+	//     if (typeof jQuery === "function" && el instanceof jQuery) {
+	//         el = el[0];
+	//     }
 
-	    return (
-	        rect.top >= 0 &&
-	        rect.left >= 0 &&
-	        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-	        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-	    );
-	}
+	//     var rect = el.getBoundingClientRect();
 
-	function checkCurrentPage() {
-		let visiblePage;
-		if (isElementInViewport(document.getElementById('logo'))) {
-			visiblePage = 'main-page';
-		} else if (isElementInViewport(document.getElementById('my-pic'))) {
-			visiblePage = 'about-page';
-		} else if (isElementInViewport(document.getElementById('test'))) {
-			visiblePage = 'work-page';
-		} else if (isElementInViewport(document.getElementById('contact-me'))) {
-			visiblePage = 'contact-page';
-		} else {
-			visiblePage = null;
-		}
+	//     return (
+	//         rect.top >= 0 &&
+	//         rect.left >= 0 &&
+	//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+	//         rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+	//     );
+	// }
 
-		return visiblePage;
-	}
+	// function checkCurrentPage() {
+	// 	let visiblePage;
+	// 	if (isElementInViewport(document.getElementById('logo'))) {
+	// 		visiblePage = 'main-page';
+	// 	} else if (isElementInViewport(document.getElementById('my-pic'))) {
+	// 		visiblePage = 'about-page';
+	// 	} else if (isElementInViewport(document.getElementById('work-text'))) {
+	// 		visiblePage = 'work-page';
+	// 	} else if (isElementInViewport(document.getElementById('contact-text'))) {
+	// 		visiblePage = 'contact-page';
+	// 	} else {
+	// 		visiblePage = null;
+	// 	}
+
+	// 	return visiblePage;
+	// }
 
 	// function onVisibilityChange(el, callback) {
 	//     var old_visible;

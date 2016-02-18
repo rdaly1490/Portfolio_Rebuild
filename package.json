@@ -11,6 +11,7 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
+    "fullpage.js": "^2.7.7",
     "hogan-express": "*",
     "jquery": "^2.2.0",
     "jquery-scrollstop": "^1.2.0",

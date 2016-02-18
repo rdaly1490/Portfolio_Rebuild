@@ -184,7 +184,7 @@ a {
 		height:100%;
 		width: 30px;
 		margin: 0 auto;
-		background: url('/images/mouse.png') center no-repeat;
+		background: url('/images/down-arrows.png') center no-repeat;
 		background-size: contain;
 		&:hover {
 			cursor: pointer;
@@ -208,7 +208,6 @@ a {
 	height: 8vh;
 	margin: 1px;
 	margin-bottom: 6vh;
-	margin-top: -0.2vh;
 	.header-container {
 		text-align: center;
 		position: relative;
