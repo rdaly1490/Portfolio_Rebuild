@@ -4,34 +4,62 @@ require('fullpage.js');
 
 $(document).ready(function(){
 
-	$('#fullpage').fullpage();
-
-	// need to scroll to top on refresh XXX
-	$('.work-carousel').slick({
-		dots: true,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow: "<img id='prev-arrow' class='a-left control-c prev slick-prev' src='/images/prev.png'>",
-		nextArrow: "<img id='next-arrow' class='a-right control-c next slick-next' src='/images/next.png'>",
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					arrows: true,
-		
-				}
-			},
-			{
-				breakpoint: 545,
-				settings: {
-					arrows: false,
-		
-			  	}
-			}
-		]
+	$('#fullpage').fullpage({
+		slideSelector: '.carousel-slide',
+		afterRender: function() {
+			$('.work-carousel').slick({
+				dots: true,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				prevArrow: "<img id='prev-arrow' class='a-left control-c prev slick-prev' src='/images/prev.png'>",
+				nextArrow: "<img id='next-arrow' class='a-right control-c next slick-next' src='/images/next.png'>",
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							arrows: true,
+				
+						}
+					},
+					{
+						breakpoint: 545,
+						settings: {
+							arrows: false,
+				
+					  	}
+					}
+				]
+			});
+		}
 	});
+
+	// $('.work-carousel').slick({
+	// 	dots: true,
+	// 	infinite: true,
+	// 	speed: 300,
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	prevArrow: "<img id='prev-arrow' class='a-left control-c prev slick-prev' src='/images/prev.png'>",
+	// 	nextArrow: "<img id='next-arrow' class='a-right control-c next slick-next' src='/images/next.png'>",
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				arrows: true,
+		
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 545,
+	// 			settings: {
+	// 				arrows: false,
+		
+	// 		  	}
+	// 		}
+	// 	]
+	// });
 
 	// const animateScroll = (elementId, speed=1000) => {
 	// 	$('html, body').animate({
