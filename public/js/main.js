@@ -17,6 +17,7 @@ $(document).ready(() => {
 		easingcss3: 'ease-out',
 		anchors: ['home', 'about-me', 'past-work', 'contact-me'],
 		animateAnchor: true,
+		autoScrolling: false, // leave for debugging purposes
 		afterRender: () => {
 			$('.work-carousel').slick({
 				dots: true,
