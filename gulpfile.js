@@ -8,6 +8,8 @@ var watchify = require('watchify');
 var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var uglify = require("gulp-uglify");
+var cssnano = require('gulp-cssnano');
 // var browserSync = require('browser-sync').create();
 
 function bundle (bundler) {
@@ -54,5 +56,17 @@ gulp.task('minify-images', () => {
             use: [pngquant()]
         }))
         .pipe(gulp.dest('./dist/images'));
+});
+
+gulp.task("js-uglify", function() {
+    return gulp.src('./dist/js/bundle.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task("css-minify", function() {
+    return gulp.src('./dist/css/main.css')
+    .pipe(cssnano())
+    .pipe(gulp.dest('./dist/css'));
 });
 
