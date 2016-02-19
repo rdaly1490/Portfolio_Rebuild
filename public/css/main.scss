@@ -206,7 +206,7 @@ a {
 	background-color: $white;
 	height: 8vh;
 	margin: 1px;
-	margin-bottom: 6vh;
+	// margin-bottom: 6vh;
 	.header-container {
 		text-align: center;
 		position: relative;
@@ -296,10 +296,6 @@ a {
 
 #work-text {
 	color: $red;
-}
-
-.slick-slider {
-	margin-bottom: 0px;
 }
 
 .work-carousel {
