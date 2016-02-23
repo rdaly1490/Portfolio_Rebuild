@@ -15228,6 +15228,7 @@ $(document).ready(function () {
 				})(navigator.userAgent || navigator.vendor || window.opera);
 				return check;
 			};
+			$('.scroll-container').css('marginTop', '-5vh');
 			if (mobileCheck()) {
 				(function () {
 					var resizeBackground = function resizeBackground() {
@@ -15235,8 +15236,7 @@ $(document).ready(function () {
 					};
 
 					var vhPages = $('#main-page, #about-page, #work-page, contact-page');
-					$('#logo').css('marginBottom', '4vh');
-					$('#main-page, #about-page, #work-page, contact-page').css('height', '95vh');
+					$('#logo').css('marginBottom', '4.5vh');
 					$(window).resize('resizeBackground');
 
 					resizeBackground();

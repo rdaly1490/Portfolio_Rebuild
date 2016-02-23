@@ -57,8 +57,8 @@ $(document).ready(() => {
 			}
 			if (mobileCheck()) {
 				const vhPages = $('#main-page, #about-page, #work-page, contact-page');
-				$('#logo').css('marginBottom', '4vh');
-				$('#main-page, #about-page, #work-page, contact-page').css('height', '95vh');
+				$('#logo').css('marginBottom', '4.5vh');
+				$('.scroll-container').css('marginTop', '-5vh');
 				$(window).resize('resizeBackground');
 				function resizeBackground() {
 				    vhPages.height($(window).height() + 60);

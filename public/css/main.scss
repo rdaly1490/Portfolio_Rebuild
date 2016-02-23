@@ -237,6 +237,7 @@ a {
 .info-section {
 	text-align: center;
 	.my-picture {
+		margin-top: 4vh;
 		height: 150px;
 		img {
 			height: 150px;
@@ -269,7 +270,7 @@ a {
 				margin-top: 1.6vh;
 			}
 		}
-		font-size: 1.8vh;
+		font-size: 2.3vh;
 		color: $white;
 		font-family: 'RobotoLight';
 		border-top: 1px solid rgba(255, 255, 255, .5);
@@ -623,7 +624,7 @@ a {
 			}
 		}
 		.lower-text {
-			font-size: 2vh;
+			font-size: 2.6vh;
 		}
 	}
 }
