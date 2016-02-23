@@ -58,7 +58,7 @@ $(document).ready(() => {
 			if (mobileCheck()) {
 				const vhPages = $('#main-page, #about-page, #work-page, contact-page');
 				$('#logo').css('marginBottom', '4vh');
-				vhPages.css('height', '95vh');
+				$('#main-page, #about-page, #work-page, contact-page').css('height', '95vh');
 				$(window).resize('resizeBackground');
 				function resizeBackground() {
 				    vhPages.height($(window).height() + 60);
