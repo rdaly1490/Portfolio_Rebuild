@@ -15219,6 +15219,12 @@ $(document).ready(function () {
 			// brings user to top page after refresh
 			window.history.replaceState(null, null, '#home');
 
+			/*
+   VH units have a known bug in mobile browsers where the url bar will
+   take up a portion of the 100vh on a page.  Below we check if the user
+   is using a mobile browser via regex (thanks to detectmobilebrowsers.com),
+   and then if so we manipulate the background total size with jQuery.
+   */
 			var mobilecheck = function mobilecheck() {
 				var check = false;
 				(function (a) {
@@ -15227,14 +15233,16 @@ $(document).ready(function () {
 				return check;
 			};
 			if (mobilecheck()) {
-				var resizeBackground = function resizeBackground() {
-					bg.height($(window).height() + 60);
-				};
+				(function () {
+					var resizeBackground = function resizeBackground() {
+						vhPages.height($(window).height() + 60);
+					};
 
-				var bg = $("#main-page, #about-page, #work-page, contact-page");
-				$(window).resize("resizeBackground");
+					var vhPages = $("#main-page, #about-page, #work-page, contact-page");
+					$(window).resize("resizeBackground");
 
-				resizeBackground();
+					resizeBackground();
+				})();
 			}
 		}
 	});
