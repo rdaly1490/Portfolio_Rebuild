@@ -15231,11 +15231,12 @@ $(document).ready(function () {
 			if (mobileCheck()) {
 				(function () {
 					var resizeBackground = function resizeBackground() {
-						vhPages.height($(window).height() + 200);
+						vhPages.height($(window).height() + 60);
 					};
 
-					$('#logo').css('marginBottom', '4vh');
 					var vhPages = $('#main-page, #about-page, #work-page, contact-page');
+					$('#logo').css('marginBottom', '4vh');
+					vhPages.css('height', '90vh');
 					$(window).resize('resizeBackground');
 
 					resizeBackground();

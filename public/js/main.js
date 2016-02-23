@@ -56,11 +56,12 @@ $(document).ready(() => {
 				return check;
 			}
 			if (mobileCheck()) {
-				$('#logo').css('marginBottom', '4vh');
 				const vhPages = $('#main-page, #about-page, #work-page, contact-page');
+				$('#logo').css('marginBottom', '4vh');
+				vhPages.css('height', '90vh');
 				$(window).resize('resizeBackground');
 				function resizeBackground() {
-				    vhPages.height($(window).height() + 200);
+				    vhPages.height($(window).height() + 60);
 				}
 				resizeBackground();
 			}
