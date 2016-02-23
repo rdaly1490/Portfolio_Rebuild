@@ -2,10 +2,6 @@ const $ = require('jquery');
 const slick = require('slick-carousel');
 require('fullpage.js');
 
-// might want a variable for autoScrolling: var and change it depending on viewport width
-// This way it disables the scroll behavior if it's too janky for mobile devices
-// or use jQuery.browser XXX
-
 $(document).ready(() => {
 
 	$('#fullpage').fullpage({
@@ -60,6 +56,7 @@ $(document).ready(() => {
 				return check;
 			}
 			if (mobilecheck()) {
+				$('#logo').css('marginBottom', '4vh');
 				const vhPages = $('#main-page, #about-page, #work-page, contact-page');
 				$(window).resize('resizeBackground');
 				function resizeBackground() {
