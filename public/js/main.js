@@ -60,7 +60,7 @@ $(document).ready(() => {
 				const vhPages = $('#main-page, #about-page, #work-page, contact-page');
 				$(window).resize('resizeBackground');
 				function resizeBackground() {
-				    vhPages.height($(window).height() + 120);
+				    vhPages.height($(window).height() + 200);
 				}
 				resizeBackground();
 			}
