@@ -15,7 +15,7 @@ $(document).ready(() => {
 		scrollingSpeed: 1000,
 		css3: true,
 		easingcss3: 'ease-out',
-		anchors: ['home', 'about-me', 'past-work', 'contact-me'],
+		anchors: ['', 'about-me', 'past-work', 'contact-me'],
 		animateAnchor: true,
 		// autoScrolling: false, // leave for debugging purposes
 		afterRender: () => {
@@ -46,7 +46,7 @@ $(document).ready(() => {
 				]
 			});
 			// brings user to top page after refresh
-			window.history.replaceState(null, null, '#home');
+			window.history.replaceState(null, null, '#');
 
 			/*
 			VH units have a known bug in mobile browsers where the url bar will
@@ -60,8 +60,8 @@ $(document).ready(() => {
 				return check;
 			}
 			if (mobilecheck()) {
-				const vhPages = $("#main-page, #about-page, #work-page, contact-page");
-				$(window).resize("resizeBackground");
+				const vhPages = $('#main-page, #about-page, #work-page, contact-page');
+				$(window).resize('resizeBackground');
 				function resizeBackground() {
 				    vhPages.height($(window).height() + 60);
 				}
@@ -70,39 +70,19 @@ $(document).ready(() => {
 		}
 	});
 
-	// const animateScroll = (elementId, speed=1000) => {
-	// 	$('html, body').animate({
- //        	scrollTop: $(`#${elementId}`).offset().top
- //    	}, speed);
-	// }
+	// No need for overkill here, only have 2 cases for listeners that aren't provided
+	// by slick carousel
+	const addCarouselListeners = (elementId) => {
+		const imgString = elementId.substring(0,4);
+		$(`#${elementId}`).on('mouseenter', (e) => {
+			e.target.src = `/images/${imgString}-hover.png`;
+		});
+		$(`#${elementId}`).on('mouseleave', (e) => {
+			e.target.src = `/images/${imgString}.png`;
+		});
+	}
 
-	// // HomePage Buttons
-	// const addEventListeners = (element, eventType, cb) => {
-	// 	const scrollTo = element === '.scroll' ? 'about' : element.substr(1);
-	// 	$(`${element}`).on(eventType, () => {
-	// 		cb(`${scrollTo}-page`);
-	// 	});
-	// }
-
-	// const btnArray = ['#about', '#work', '#contact', '.scroll'];
-
-	// for (const el of btnArray) {
-	// 	addEventListeners(el, 'click', animateScroll);
-	// }
-
-	// Carousel Buttons
-
-	$('#prev-arrow').on('mouseenter', (e) => {
-		e.target.src = '/images/prev-hover.png';
-	});
-	$('#prev-arrow').on('mouseleave', (e) => {
-		e.target.src = '/images/prev.png';
-	});
-	$('#next-arrow').on('mouseenter', (e) => {
-		e.target.src = '/images/next-hover.png';
-	});
-	$('#next-arrow').on('mouseleave', (e) => {
-		e.target.src = '/images/next.png';
-	});
+	addCarouselListeners('prev-arrow');
+	addCarouselListeners('next-arrow');
 
 });
