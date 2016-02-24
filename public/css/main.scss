@@ -925,6 +925,95 @@ a {
 	}
 }
 
+@media (min-height: 900px) {
+	.contact-squares {
+		.email {
+			.contact-image-container {
+				.contact-image {
+				}
+			}
+			.bottom-title {
+				font-size: 27px;
+			}
+		}
+	}
+}
+
+@media (min-height: 1050px) {
+	.contact-squares {
+		.email {
+
+		}
+		.social-media {
+			.social-media-images-container {
+				.social-media-images {
+					.github {
+					}
+					.fb {
+					}
+					.twitter {
+					}
+				}
+			}
+			.bottom-title {
+				font-size: 35px;
+			}
+		}
+	}
+	.work-carousel {
+		.slide {
+			.project-image-container {
+				.project-image-iobrew {
+					background-size: 100%;
+				}
+				.project-image-fitkora {
+					background-size: 100%;
+				}
+				.project-image-iron {
+					background-size: 100%;
+				}
+				.project-link-btns {
+					.code-repo {
+						.code-repo-img {
+							height: 75px;
+							width: 75px;
+							background-size: 30px;
+							border: 3px solid $white;
+						}
+					}
+					.live-site {
+						.live-site-img {
+							height: 75px;
+							width: 75px;
+							background-size: 30px;
+							border: 3px solid $white;
+						}
+					}
+				}
+			}
+		}
+	}
+	.info-section {
+		text-align: center;
+		.my-picture {
+			height: 170px;
+			img {
+				height: 200px;
+				width:200px;
+				border-radius: 50%;
+			}
+		}
+	}
+	.icon-container {
+		.to-center {
+			max-width: 310px;
+		}
+	}
+	.section-icons {
+		height:80px;
+		width:80px;
+	}
+}
 
 
 

@@ -15228,15 +15228,15 @@ $(document).ready(function () {
 				})(navigator.userAgent || navigator.vendor || window.opera);
 				return check;
 			};
-			$('.scroll-container').css('marginTop', '-5vh');
 			if (mobileCheck()) {
 				(function () {
 					var resizeBackground = function resizeBackground() {
-						vhPages.height($(window).height() + 60);
+						vhPages.height($(window).height() - 60);
 					};
 
 					var vhPages = $('#main-page, #about-page, #work-page, contact-page');
 					$('#logo').css('marginBottom', '4.5vh');
+					$('.scroll-container').css('marginTop', '-5vh');
 					$(window).resize('resizeBackground');
 
 					resizeBackground();
