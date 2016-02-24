@@ -59,7 +59,7 @@ $(document).ready(() => {
 				const vhPages = $('#main-page, #about-page, #work-page, contact-page');
 				$('#logo').css('marginBottom', '4.5vh');
 				$('.scroll-container').css('marginTop', '-5vh');
-				$('.slick-active').css('paddingBottom', '6vh');
+				$('.slick-active').css('marginBottom', '7%');
 				$(window).resize('resizeBackground');
 				function resizeBackground() {
 				    vhPages.height($(window).height() + 60);
