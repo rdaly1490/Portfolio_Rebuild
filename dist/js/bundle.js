@@ -15231,7 +15231,7 @@ $(document).ready(function () {
 			if (mobileCheck()) {
 				(function () {
 					var resizeBackground = function resizeBackground() {
-						vhPages.height($(window).height() - 60);
+						vhPages.height($(window).height() + 60);
 					};
 
 					var vhPages = $('#main-page, #about-page, #work-page, contact-page');

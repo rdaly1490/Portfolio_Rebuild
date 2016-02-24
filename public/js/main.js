@@ -61,7 +61,7 @@ $(document).ready(() => {
 				$('.scroll-container').css('marginTop', '-5vh');
 				$(window).resize('resizeBackground');
 				function resizeBackground() {
-				    vhPages.height($(window).height() - 60);
+				    vhPages.height($(window).height() + 60);
 				}
 				resizeBackground();
 			}
