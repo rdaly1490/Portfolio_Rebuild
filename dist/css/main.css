@@ -575,7 +575,7 @@ a {
           height: 60px;
           width: 60px; }
       .contact-squares .email .bottom-title {
-        font-size: 2.5vh;
+        font-size: 125%;
         width: 100%;
         height: 6.75vh;
         line-height: 6.75vh; }
@@ -592,7 +592,7 @@ a {
         .contact-squares .social-media .social-media-images-container .social-media-images {
           width: 200px; }
       .contact-squares .social-media .bottom-title {
-        font-size: 3vh;
+        font-size: 125%;
         width: 100%;
         height: 6.75vh;
         line-height: 6.75vh; }
@@ -639,13 +639,7 @@ a {
         .contact-squares .social-media .bottom-title span {
           vertical-align: middle; } }
 
-@media (min-height: 900px) {
-  .contact-squares .email .bottom-title {
-    font-size: 27px; } }
-
 @media (min-height: 1050px) {
-  .contact-squares .social-media .bottom-title {
-    font-size: 35px; }
   .work-carousel .slide .project-image-container .project-image-iobrew {
     background-size: 100%; }
   .work-carousel .slide .project-image-container .project-image-fitkora {

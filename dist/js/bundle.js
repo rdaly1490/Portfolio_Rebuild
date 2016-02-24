@@ -15237,7 +15237,7 @@ $(document).ready(function () {
 					var vhPages = $('#main-page, #about-page, #work-page, contact-page');
 					$('#logo').css('marginBottom', '4.5vh');
 					$('.scroll-container').css('marginTop', '-5vh');
-					$('.slick-active').css('marginBottom', '7%');
+					$('.slick-active').css('marginBottom', '10vh');
 					$(window).resize('resizeBackground');
 
 					resizeBackground();
