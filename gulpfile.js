@@ -70,3 +70,9 @@ gulp.task("css-minify", function() {
     .pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task("slick-minify", function() {
+    return gulp.src('./node_modules/slick-carousel/slick/*.css')
+    .pipe(cssnano())
+    .pipe(gulp.dest('./dist/css'));
+});
+

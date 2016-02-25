@@ -13,7 +13,6 @@ $(document).ready(() => {
 		easingcss3: 'ease-out',
 		anchors: ['', 'about-me', 'past-work', 'contact-me'],
 		animateAnchor: true,
-		// autoScrolling: false, // leave for debugging purposes
 		afterRender: () => {
 			$('.work-carousel').slick({
 				dots: true,
@@ -36,7 +35,8 @@ $(document).ready(() => {
 						breakpoint: 545,
 						settings: {
 							arrows: false,
-				
+							fade: false,
+							speed: 700
 					  	}
 					}
 				]
@@ -47,8 +47,8 @@ $(document).ready(() => {
 			/*
 			VH units have a known bug in ios safari browsers where the url bar will
 			take up a portion of the 100vh on a page.  Below we check if the user
-			is using a mobile browser via regex (thanks to detectmobilebrowsers.com),
-			and then if so we manipulate the background total size with jQuery.
+			is using an ios browser, and then if so we manipulate the background 
+			total size with jQuery.
 			*/
 			const iOSCheck = () => {
 				var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;

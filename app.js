@@ -16,5 +16,5 @@ appRoutes(express, app);
 var port = process.env.PORT || 3000;
 
 app.listen(port, function() {
-	console.log('server running....');
+	console.log('server running on port ' + port);
 });
