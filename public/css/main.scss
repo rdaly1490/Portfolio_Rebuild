@@ -551,11 +551,11 @@ a {
 					background-size: contain;
 					cursor: pointer;
 				}
-				.fb {
+				.linked-in {
 					display: inline-block;
 					height: 100%;
 					width: 31%;
-					background: url('/images/fb-social.png') center no-repeat;
+					background: url('/images/linked-in.png') center no-repeat;
 					background-size: contain;
 					cursor: pointer;
 				}
@@ -925,41 +925,7 @@ a {
 	}
 }
 
-// @media (min-height: 900px) {
-// 	.contact-squares {
-// 		.email {
-// 			.contact-image-container {
-// 				.contact-image {
-// 				}
-// 			}
-// 			.bottom-title {
-// 				// font-size: 27px;
-// 			}
-// 		}
-// 	}
-// }
-
 @media (min-height: 1050px) {
-	.contact-squares {
-		.email {
-
-		}
-		.social-media {
-			.social-media-images-container {
-				.social-media-images {
-					.github {
-					}
-					.fb {
-					}
-					.twitter {
-					}
-				}
-			}
-			.bottom-title {
-				// font-size: 35px;
-			}
-		}
-	}
 	.work-carousel {
 		.slide {
 			.project-image-container {
