@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "compression": "^1.6.1",
     "express": "^4.13.4",
     "fullpage.js": "^2.7.7",
     "hogan-express": "*",
