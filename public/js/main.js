@@ -83,4 +83,5 @@ $(document).ready(() => {
 	addCarouselListeners('prev-arrow');
 	addCarouselListeners('next-arrow');
 
+	console.log('%cTaking a look at my %c<code /> %c? :)', "color: green; font-weight: bold", "color: gray; font-size: 16px", "color: green; font-weight: bold");
 });
