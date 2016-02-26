@@ -4,7 +4,7 @@ var appRoutes = require('./routes/routes');
 
 var app = express();
 
-app.engine('html', require('hogan-express'));
+app.engine('html', require('ejs').__express);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 
