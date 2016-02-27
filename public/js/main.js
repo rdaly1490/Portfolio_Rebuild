@@ -38,33 +38,10 @@ $(document).ready(() => {
 				}
 			]
 		});
+
 		// brings user to top page after refresh
 		window.history.replaceState(null, null, '#');
 
-		/*
-		VH units have a known bug in ios safari browsers where the url bar will
-		take up a portion of the 100vh on a page.  Below we check if the user
-		is using an ios browser, and then if so we manipulate the background 
-		total size with jQuery.
-		*/
-		// const iOSCheck = () => {
-		// 	var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-		// 	return iOS;
-		// }
-		// if (iOSCheck()) {
-		// 	const vhPages = $('#main-page, #about-page, #work-page, contact-page');
-		// 	$('#logo').css('marginBottom', '4.5vh');
-		// 	$('.scroll-container').css('marginTop', '-5vh');
-		// 	$('.slick-active').css('marginBottom', '10vh');
-		// 	$(window).resize('resizeBackground');
-		// 	function resizeBackground() {
-		// 	    vhPages.height($(window).height() + 60);
-		// 	}
-		// 	resizeBackground();
-		// }
-
-		// No need for overkill here, only have 2 cases for listeners that aren't provided
-		// by slick carousel
 		const addCarouselListeners = (elementId) => {
 			const imgString = elementId.substring(0,4);
 			$(`#${elementId}`).on('mouseenter', (e) => {
@@ -77,12 +54,30 @@ $(document).ready(() => {
 
 		addCarouselListeners('prev-arrow');
 		addCarouselListeners('next-arrow');
-
-		console.log('%cTaking a look at my %c<code /> %c? :)', "color: green; font-weight: bold", "color: gray; font-size: 16px", "color: green; font-weight: bold");		
 	}
 
+	/*  Here we disable the fullpage js scroll functionality on mobile devices.
+		There's a bug with vh units on safari mobile browsers with no 100% fix yet,
+		and the carousel was a bit janky with the scroll effect
+	*/
 	if (mobileCheck()) {
 		init();
+		$('.scroll-container').css('marginTop', '-5vh');
+		const btnArray = ['#about', '#work', '#contact', '.scroll'];
+		const animateScroll = (elementId, speed=1000) => {
+			$('html, body').animate({
+		 		scrollTop: $(`#${elementId}`).offset().top
+			}, speed);
+		}
+		const addEventListeners = (element, eventType, cb) => {
+		const scrollTo = element === '.scroll' ? 'about' : element.substr(1);
+			$(`${element}`).on(eventType, () => {
+				cb(`${scrollTo}-page`);
+			});
+		}
+		for (const el of btnArray) {
+			addEventListeners(el, 'click', animateScroll);
+		}
 	} else {
 		$('#fullpage').fullpage({
 			paddingTop: '0px',
@@ -95,6 +90,7 @@ $(document).ready(() => {
 			animateAnchor: true,
 			afterRender: () => {
 				init();
+				console.log('%cTaking a look at my %c<code /> %c? :)', "color: green; font-weight: bold", "color: gray; font-size: 16px", "color: green; font-weight: bold");		
 			}
 		});		
 	}
