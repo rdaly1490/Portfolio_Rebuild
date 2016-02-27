@@ -2,6 +2,9 @@ const $ = require('jquery');
 const slick = require('slick-carousel');
 require('fullpage.js');
 
+var sayHi = function() {
+	console.log('Hi, I\'m Rob');
+}
 $(document).ready(() => {
 
 	const mobileCheck = () => {
@@ -90,7 +93,8 @@ $(document).ready(() => {
 			animateAnchor: true,
 			afterRender: () => {
 				init();
-				console.log('%cTaking a look at my %c<code /> %c? :)', "color: green; font-weight: bold", "color: gray; font-size: 16px", "color: green; font-weight: bold");		
+				console.log('%cWelcome to my code! %c🚀', 'color: green; font-weight: bold; font-size: 20px', 'font-size: 30px');
+				console.log('%cYou must be a developer too, I like your style --> sayHi()', 'font-weight: bold; font-size: 12px');
 			}
 		});		
 	}
