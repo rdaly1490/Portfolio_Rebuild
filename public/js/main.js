@@ -2,9 +2,6 @@ const $ = require('jquery');
 const slick = require('slick-carousel');
 require('fullpage.js');
 
-var sayHi = function() {
-	console.log('Hi, I\'m Rob');
-}
 $(document).ready(() => {
 
 	const mobileCheck = () => {
