@@ -70,12 +70,6 @@ body {
 
 .pages {
 	height: 100vh;
-
-	//XXXX IMPORTANT XXXX
-	// later might need to do something like if viewportHeight > x or media queries
-	// in case someone tilts phone to landscape, vh wil probably screw everything up royally.
-	// or maybe if screen landscape height: 300vh....
-	//XXXX IMPORTANT XXXX
 }
 
 a {
@@ -710,9 +704,9 @@ a {
 					width: 80%;
 					margin: 0 auto;
 					height: 20%;
-					font-size: 8vh;
+					font-size: 325%;
 					.type {
-						font-size: 2.5vh;
+						font-size: 40%;
 					}
 				}
 				.description {
@@ -891,7 +885,6 @@ a {
 				padding-top: 5vh;
 			}
 			.bottom-title {
-				font-size: 3vh;
 				width: 100%;
 				height: 7.5vh;
 				line-height: 7.5vh;
@@ -913,7 +906,6 @@ a {
 				}
 			}
 			.bottom-title {
-				font-size: 3vh;
 				width: 100%;
 				height: 7.5vh;
 				line-height: 7.5vh;
@@ -926,61 +918,110 @@ a {
 }
 
 @media (min-height: 1050px) {
-	.work-carousel {
-		.slide {
-			.project-image-container {
-				.project-image-iobrew {
-					background-size: 100%;
-				}
-				.project-image-fitkora {
-					background-size: 100%;
-				}
-				.project-image-iron {
-					background-size: 100%;
-				}
-				.project-link-btns {
-					.code-repo {
-						.code-repo-img {
-							height: 75px;
-							width: 75px;
-							background-size: 30px;
-							border: 3px solid $white;
-						}
-					}
-					.live-site {
-						.live-site-img {
-							height: 75px;
-							width: 75px;
-							background-size: 30px;
-							border: 3px solid $white;
-						}
-					}
-				}
-			}
-		}
-	}
-	.info-section {
-		text-align: center;
-		.my-picture {
-			height: 170px;
-			img {
-				height: 200px;
-				width:200px;
-				border-radius: 50%;
-			}
-		}
-	}
-	.icon-container {
-		.to-center {
-			max-width: 310px;
-		}
-	}
-	.section-icons {
-		height:80px;
-		width:80px;
-	}
+    .contact-squares {
+        .email {
+            .bottom-title {
+                font-size: 100%;
+            }
+        }
+        .social-media {
+            .bottom-title {
+                font-size: 100%;
+            }
+        }
+    }
+    .work-carousel {
+        .slide {
+            .project-text {
+                .description {
+                    li {
+                    	font-size: 140%;
+                    }
+                }
+            }
+        }
+    }
 }
 
+@media (min-height: 1050px) and (min-width: 992px) {
+    .work-carousel {
+        .slide {
+            .project-image-container {
+                .project-image-iobrew {
+                        background-size: 100%;
+                }
+                .project-image-fitkora {
+                        background-size: 100%;
+                }
+                .project-image-iron {
+                        background-size: 100%;
+                }
+                .project-link-btns {
+                    .code-repo {
+                        .code-repo-img {
+                            height: 75px;
+                            width: 75px;
+                            background-size: 30px;
+                            border: 3px solid $white;
+                        }
+                    }
+                    .live-site {
+                        .live-site-img {
+                            height: 75px;
+                            width: 75px;
+                            background-size: 30px;
+                            border: 3px solid $white;
+                        }
+                    }
+                }
+            }
+            .project-text {
+                margin-top: 19vh;
+                .title {
+                    height: 13%;
+                    .type {
+                    }
+                }
+                .description {
+                    li {
+                        font-size: 160%;
+                    }
+                }
+            }
+        }
+    }
+    .info-section {
+        text-align: center;
+        .my-picture {
+            height: 170px;
+            margin-top: 2vh;
+            img {
+                height: 200px;
+                width:200px;
+                border-radius: 50%;
+            }
+        }
+        .header-text {
+            margin-top: 2vh;
+        }
+    }
+    .icon-container {
+        .to-center {
+            max-width: 310px;
+        }
+    }
+    .section-icons {
+        height:80px;
+        width:80px;
+    }
+    .contact-squares {
+        .email {
+            .contact-image-container {
+                padding-top: 7.5vh;
+            }
+        }
+    }
+}
 
 
 
