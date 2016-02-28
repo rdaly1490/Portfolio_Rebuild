@@ -63,6 +63,8 @@ $(document).ready(() => {
 	if (mobileCheck()) {
 		init();
 		$('.scroll-container').css('marginTop', '-5vh');
+		$('.title').css('fontSize', '8vh');
+		$('.type').css('fontSize', '2.5vh');
 		const btnArray = ['#about', '#work', '#contact', '.scroll'];
 		const animateScroll = (elementId, speed=1000) => {
 			$('html, body').animate({

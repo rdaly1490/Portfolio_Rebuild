@@ -69,7 +69,7 @@ body {
 }
 
 .pages {
-	height: 100vh;
+	height: 100vh !important;
 }
 
 a {
@@ -199,8 +199,7 @@ a {
 .page-header {
 	background-color: $white;
 	height: 8vh;
-	margin: 1px;
-	// margin-bottom: 6vh;
+	margin: 0px 1px 1px 1px;
 	.header-container {
 		text-align: center;
 		position: relative;
