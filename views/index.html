@@ -212,16 +212,10 @@
 </script>
 <script>
 function sayHi(){
-	var src;
     console.log('%cHi I\'m Rob.  I hope you\'re enjoying my site', "color: purple; font-weight: bold");
     document.getElementById('myModal').style.display = 'block';
     document.getElementById('myModal').style.backgroundColor = 'rgba(0,0,0,0.5)';
-    if (navigator.vendor === 'Google Inc.') {
-    	src = 'https://www.youtube.com/v/FsqJFIJ5lLs&amp;autoplay=1';
-    } else {
-    	src = 'https://www.youtube.com/embed/FsqJFIJ5lLs&amp;autoplay=1';
-    }
-    document.getElementById('vid-to-play').setAttribute('src', src);
+    document.getElementById('vid-to-play').setAttribute('src', 'https://www.youtube.com/embed/FsqJFIJ5lLs?autoplay=1');
 }
 </script>
 </body>
