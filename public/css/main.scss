@@ -230,11 +230,12 @@ a {
 .info-section {
 	text-align: center;
 	.my-picture {
-		margin-top: 4vh;
-		height: 150px;
+		margin-top: 3vh;
+		height: 200px;
 		img {
-			height: 150px;
-			width:150px;
+			border: 2px solid $darkBlue;
+			height: 200px;
+			width:185px;
 			border-radius: 50%;
 		}
 	}
