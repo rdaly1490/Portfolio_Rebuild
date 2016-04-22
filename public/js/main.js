@@ -91,7 +91,7 @@ $(document).ready(() => {
 			afterRender: () => {
 				init();
 				console.log('%cWelcome to my code! %c🚀', 'color: green; font-weight: bold; font-size: 20px', 'font-size: 30px');
-				console.log('%cYou must be a developer too, I like your style --> sayHi()', 'font-weight: bold; font-size: 12px');
+				console.log('%cYou must be a developer too, I like your style.  Want some entertainment?  --> type entertainMe()', 'font-weight: bold; font-size: 12px');
 			}
 		});		
 	}
